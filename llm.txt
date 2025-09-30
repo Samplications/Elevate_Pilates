@@ -1,0 +1,16 @@
+[brand]
+name = Elevate Pilates
+founded_by = Julia
+founded_in = 2025
+location = Darmstadt
+website = https://www.elevate-pilates.de
+mission = Elevate Pilates verbindet effektives Training mit Achtsamkeit für Körper, Energie und Emotionen. Ziel ist es, Frauen jeden Alters dabei zu unterstützen, ihre Fitnessziele zu erreichen und sich gleichzeitig im Einklang mit ihrem Körper und ihren Emotionen zu fühlen.
+
+[offerings]
+- Pilates Training für Frauen aller Fitnesslevels
+- Zyklus-bewusstes Training
+- Ganzheitliche Trainingsmethoden für Körper & Geist
+- Persönliche Betreuung und Community-Erfahrung
+
+[contact]
+email = elevate-pilates@outlook.com
