@@ -405,7 +405,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
   border-width: 8px;
   border-color: #1d1d1da9;
   box-shadow: 5px 5px 15px 5px #00000025;
-  min-width: 400px;
+  min-width: 250px;
 `,Ny=I.p`
   font-size: 1.4em;
 `,Uy=I(I1)`
