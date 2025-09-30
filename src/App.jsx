@@ -302,7 +302,7 @@ const StyledImg = styled.img`
   border-width: 8px;
   border-color: #1d1d1da9;
   box-shadow: 5px 5px 15px 5px #00000025;
-  min-width: 400px;
+  min-width: 250px;
 `;
 
 const AboutTxt = styled.p`
