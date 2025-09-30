@@ -639,11 +639,18 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
   color: #1d1d1da9;
   margin-bottom: 0;
   text-align: center;
+
+  @media (max-width: 767px) {
+    font-size: 3em;
+  }
 `,w2=I.span`
   font-family: var(--f-elevate);
   color: var(--c-secondary);
   font-size: 6rem;
   font-weight: 500;
+  @media (max-width: 767px) {
+    font-size: 2em;
+  }
 `,E2=I.div`
   border: 1px solid var(--c-secondary);
   background: var(--c-white);
