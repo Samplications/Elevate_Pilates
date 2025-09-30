@@ -54,6 +54,10 @@ const SectionTitle = styled.h1`
   color: #1d1d1da9;
   margin-bottom: 0;
   text-align: center;
+
+  @media (max-width: 767px) {
+    font-size: 3em;
+  }
 `;
 
 const ElevateSpan = styled.span`
@@ -61,6 +65,9 @@ const ElevateSpan = styled.span`
   color: var(--c-secondary);
   font-size: 6rem;
   font-weight: 500;
+  @media (max-width: 767px) {
+    font-size: 2em;
+  }
 `;
 
 const CardInner = styled.div`
