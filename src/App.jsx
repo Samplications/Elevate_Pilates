@@ -100,11 +100,14 @@ const ContainerDiv = styled.div`
 const CardInner = styled.div`
   border: 1px solid var(--c-secondary);
   border-radius: 55px;
-  padding: 2em 2.5em;
-  width: 100%; // Ensure it takes full width of parent
+  padding: 1.5em; // Reduced padding
+  width: 100%;
   height: 100%;
-  box-sizing: border-box; // Include padding in width calculation
+  box-sizing: border-box;
+  overflow: hidden; // Prevent overflow
+  min-width: 0; // Allow shrinking
 `;
+
 
 const CardInnerTop = styled(CardInner)`
   display: flex;
@@ -159,7 +162,7 @@ const Subtitles = styled.h2`
   font-size: 4rem;
   margin: 0;
   @media (max-width: 767px) {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 `;
 
@@ -203,24 +206,22 @@ const ElevateSpanTxt = styled(ElevateSpan)`
 `;
 
 const SignupBtn = styled(ButtonLink)`
-  font-size: 2rem;
+  font-size: 1.5rem; // Reduced from 2rem
   border-radius: 30px;
   border-width: 3px;
-  padding: 0.6em 1.2em;
-  box-sizing: border-box; // Include padding and border in the element's total width and height
-  height: auto; // Let the height adjust naturally
-  flex-grow: 1; // Allow the button to grow and fill available space
-  display: flex;
-  align-items: center; // Vertically center the content
-  justify-content: center; // Horizontally center the content
-  margin-left: 1em;
-
+  padding: 0.4em 0.8em; // Reduced padding
+  box-sizing: border-box;
+  height: auto;
+  flex-shrink: 1; // Allow button to shrink
+  max-width: 100%; // Constrain to parent width
+  margin-left: 0;
+  margin-top: 0.5em;
   @media (max-width: 767px) {
-        margin-left: 0;
-        margin-top: 0.5em;
-        text-align: center;
-      }
+    font-size: 1.2rem;
+    width: 100%; // Full width on mobile
+  }
 `;
+
 
 
 const ListDiv = styled.div`
@@ -251,7 +252,19 @@ const ListItemDiv = styled.div`
 
 const RateListItemDiv = styled(ListItemDiv)`
   justify-content: space-between;
+  width: 100%;
+  box-sizing: border-box;
+
+  @media (max-width: 767px) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.3em;
+    p {
+      font-size: 0.9rem;
+    }
+  }
 `;
+
 
 const WiggleAnimation = keyframes`
     0% { transform: rotate(0deg); }
