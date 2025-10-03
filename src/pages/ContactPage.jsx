@@ -9,7 +9,7 @@ import IconSend from '../assets/icons/send-svgrepo-com.svg?react';
 const BackLink = styled(RouterLink)`
   color: var(--c-black);
   text-decoration: none;
-  font-size: 1rem;
+  font-size: clamp(0.9rem, 2vw, 1rem);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -20,23 +20,22 @@ const BackLink = styled(RouterLink)`
 
   &:hover {
     opacity: 0.7;
-    color: var(--c-accent); // Optional: Change color on hover
+    color: var(--c-accent);
   }
 
   &::before {
-    content: "←"; // Unicode left arrow
+    content: "←";
     font-size: 1.2rem;
   }
 `;
 
-
-
 const PageDiv = styled.div`
-  width: 100vw;
+  width: 100%;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  overflow-x: hidden;
 `;
 
 const ContainerDiv = styled.div`
@@ -46,7 +45,7 @@ const ContainerDiv = styled.div`
   gap: 1em;
   width: 100%;
   max-width: 1600px;
-  padding: 2em;
+  padding: clamp(1em, 3vw, 2em);
   box-sizing: border-box;
 `;
 
@@ -54,27 +53,21 @@ const SectionTitle = styled.h1`
   color: #1d1d1da9;
   margin-bottom: 0;
   text-align: center;
-
-  @media (max-width: 767px) {
-    font-size: 3em;
-  }
+  font-size: clamp(2rem, 6vw, 4rem);
 `;
 
 const ElevateSpan = styled.span`
   font-family: var(--f-elevate);
   color: var(--c-secondary);
-  font-size: 6rem;
+  font-size: clamp(2.5rem, 8vw, 6rem);
   font-weight: 500;
-  @media (max-width: 767px) {
-    font-size: 2em;
-  }
 `;
 
 const CardInner = styled.div`
   border: 1px solid var(--c-secondary);
   background: var(--c-white);
-  border-radius: 55px;
-  padding: 2em;
+  border-radius: clamp(25px, 5vw, 55px);
+  padding: clamp(1em, 3vw, 2em);
   width: 100%;
   box-sizing: border-box;
 `;
@@ -82,12 +75,12 @@ const CardInner = styled.div`
 const RowDiv = styled.div`
   display: flex;
   justify-content: space-between;
-  gap: 2em;
+  gap: clamp(1em, 3vw, 2em);
   flex-direction: row;
 
   @media (max-width: 767px) {
     flex-direction: column;
-    gap: 1em;
+    gap: 1.5em;
   }
 `;
 
@@ -117,25 +110,29 @@ const ListDiv = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: column;
-  gap: 1em;
+  gap: 1.5em;
 `;
 
 const ListItemDiv = styled.div`
   display: flex;
-  justify-content: start;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
   flex-direction: row;
+  gap: 0.5em;
 
   svg {
-    width: 24px;
-    height: 24px;
-    margin-right: 8px;
+    width: clamp(20px, 3vw, 24px);
+    height: clamp(20px, 3vw, 24px);
+    flex-shrink: 0;
+    margin-top: 2px;
     opacity: 0.85;
   }
 
   p {
     margin: 0;
-    font-size: 1.3rem;
+    font-size: clamp(0.9rem, 2vw, 1.3rem);
+    line-height: 1.4;
+    word-break: break-word;
   }
 `;
 
@@ -143,61 +140,76 @@ const FormDiv = styled.form`
   display: flex;
   flex-direction: column;
   gap: 1em;
-  
 `;
 
 const Input = styled.input`
   padding: 0.75em;
   border: 1px solid var(--c-secondary);
   border-radius: 25px;
-  font-size: 1rem;
+  font-size: clamp(0.9rem, 2vw, 1rem);
   background: var(--c-white);
   color: var(--c-black);
+  font-family: inherit;
+  width: 100%;
+  box-sizing: border-box;
+
+  &:focus {
+    outline: none;
+    border-color: var(--c-accent);
+  }
 `;
 
 const TextArea = styled.textarea`
   padding: 0.75em;
   border: 1px solid var(--c-secondary);
   border-radius: 25px;
-  font-size: 1rem;
+  font-size: clamp(0.9rem, 2vw, 1rem);
   min-height: 150px;
   resize: vertical;
   background: var(--c-white);
   color: var(--c-black);
+  font-family: inherit;
+  width: 100%;
+  box-sizing: border-box;
+
+  &:focus {
+    outline: none;
+    border-color: var(--c-accent);
+  }
 `;
 
 const SubmitBtn = styled.button`
   background-color: var(--c-secondary);
   color: var(--c-white);
+  border: 2px solid var(--c-secondary);
   border-radius: 25px;
   padding: 0.75em 2em;
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 2vw, 1.2rem);
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.5em;
   margin-top: 0.5em;
-
-  stroke: var(--c-white);
+  transition: all 0.3s;
+  font-family: inherit;
+  font-weight: 500;
 
   &:hover {
-    opacity: 0.9;
+    background-color: var(--c-white);
+    color: var(--c-black);
+    
     svg {
-      fill: none; 
-      stroke: var(--c-black); 
-    };
-
-    border-color: var(--c-black);
+      stroke: var(--c-black);
+    }
   }
 
   svg {
-    fill: var(--c-white); 
-    stroke: none;
-
-    height: 24px; 
+    height: 24px;
     width: 24px;
-    
+    fill: var(--c-white);
+    stroke: none;
+    transition: all 0.3s;
   }
 `;
 
@@ -206,6 +218,7 @@ const SuccessMessage = styled.p`
   font-weight: bold;
   text-align: center;
   margin-top: 1em;
+  font-size: clamp(0.9rem, 2vw, 1rem);
 `;
 
 const ErrorMessage = styled.p`
@@ -213,11 +226,12 @@ const ErrorMessage = styled.p`
   font-weight: bold;
   text-align: center;
   margin-top: 1em;
+  font-size: clamp(0.9rem, 2vw, 1rem);
 `;
 
 const FAQOuterCard = styled.div`
   background-color: var(--c-white);
-  border-radius: 55px;
+  border-radius: clamp(25px, 5vw, 55px);
   padding: 0.5em;
   width: 100%;
   box-sizing: border-box;
@@ -235,10 +249,10 @@ const ContactPage = () => {
 
     emailjs
       .sendForm(
-        'service_utj4chp', // Replace with your EmailJS service ID
-        'template_r1flswz', // Replace with your EmailJS template ID
+        'service_utj4chp',
+        'template_r1flswz',
         form.current,
-        'kOvmC5bVWZLywIJxx' // Replace with your EmailJS public key
+        'kOvmC5bVWZLywIJxx'
       )
       .then(
         () => {
@@ -258,61 +272,61 @@ const ContactPage = () => {
           Kontaktiere <ElevateSpan>Elevate.</ElevateSpan>
         </SectionTitle>
         <FAQOuterCard>
-        <CardInner>
-          <RowDiv>
-            <LeftDiv>
-              <InfoDiv>
-                <ListDiv>
-                  <ListItemDiv>
-                    <IconLocation />
-                    <p>Rheinstrasse 22, 3. OG, 64283 Darmstadt</p>
-                  </ListItemDiv>
-                  <ListItemDiv>
-                    <IconEmail />
-                    <p>elevate-pilates@outlook.com</p>
-                  </ListItemDiv>
-                </ListDiv>
-              </InfoDiv>
-            </LeftDiv>
-            <RightDiv>
-              <FormDiv ref={form} onSubmit={sendEmail}>
-                <Input
-                  type="text"
-                  name="user_name"
-                  placeholder="Dein Name"
-                  required
-                />
-                <Input
-                  type="email"
-                  name="user_email"
-                  placeholder="Deine Email"
-                  required
-                />
-                <TextArea
-                  name="message"
-                  placeholder="Deine Nachricht"
-                  required
-                />
-                <SubmitBtn type="submit">
-                  <IconSend />
-                  Absenden
-                </SubmitBtn>
-                {success && (
-                  <SuccessMessage>
-                    Deine Nachricht wurde erfolgreich gesendet!
-                  </SuccessMessage>
-                )}
-                {error && (
-                  <ErrorMessage>
-                    Beim Senden Deine Nachricht ist ein Fehler aufgetreten. Bitte versuche es erneut.
-                  </ErrorMessage>
-                )}
-              </FormDiv>
-            </RightDiv>
-          </RowDiv>
-        </CardInner>
+          <CardInner>
+            <RowDiv>
+              <LeftDiv>
+                <InfoDiv>
+                  <ListDiv>
+                    <ListItemDiv>
+                      <IconLocation />
+                      <p>Rheinstrasse 22, 3. OG, 64283 Darmstadt</p>
+                    </ListItemDiv>
+                    <ListItemDiv>
+                      <IconEmail />
+                      <p>elevate-pilates@outlook.com</p>
+                    </ListItemDiv>
+                  </ListDiv>
+                </InfoDiv>
+              </LeftDiv>
+              <RightDiv>
+                <FormDiv ref={form} onSubmit={sendEmail}>
+                  <Input
+                    type="text"
+                    name="user_name"
+                    placeholder="Dein Name"
+                    required
+                  />
+                  <Input
+                    type="email"
+                    name="user_email"
+                    placeholder="Deine Email"
+                    required
+                  />
+                  <TextArea
+                    name="message"
+                    placeholder="Deine Nachricht"
+                    required
+                  />
+                  <SubmitBtn type="submit">
+                    <IconSend />
+                    Absenden
+                  </SubmitBtn>
+                  {success && (
+                    <SuccessMessage>
+                      Deine Nachricht wurde erfolgreich gesendet!
+                    </SuccessMessage>
+                  )}
+                  {error && (
+                    <ErrorMessage>
+                      Beim Senden Deine Nachricht ist ein Fehler aufgetreten. Bitte versuche es erneut.
+                    </ErrorMessage>
+                  )}
+                </FormDiv>
+              </RightDiv>
+            </RowDiv>
+          </CardInner>
         </FAQOuterCard>
-         <BackLink to="/">Zurück zur Homepage</BackLink>
+        <BackLink to="/">Zurück zur Homepage</BackLink>
       </ContainerDiv>
     </PageDiv>
   );

@@ -2,8 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund:wght@100..400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Instrument+Serif:ital@0;1&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
-
-
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
@@ -15,27 +13,27 @@
 
   --c-primary: #ddf2fc;
   --c-secondary: rgb(181, 120, 156);
-  --c-accent:#904ca1;
+  --c-accent: #904ca1;
   --c-white: #ffffff;
   --c-black: #000000;
   --c-transparent-text: rgba(255, 255, 255, 0.90);
-  --c-shadow:#0000004b;
-
-  /* --c-dark: #e9c6f7; */
-  --c-dark:#6a3d7a;
+  --c-shadow: #0000004b;
+  --c-dark: #6a3d7a;
   --c-pilates: rgb(255, 197, 231);
 
   --f-elevate: "Ms Madi";
 
   color: rgba(0, 0, 0, 0.87);
-
   background-color: var(--c-primary);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  
+}
+
+* {
+  box-sizing: border-box;
 }
 
 a {
@@ -44,49 +42,63 @@ a {
   text-decoration: inherit;
   transition: 0.3s;
 }
+
 a:hover {
   color: var(--c-white);
 }
 
 body, html {
   margin: 0;
-  display: flex;
-  place-items: center;
+  padding: 0;
   min-width: 320px;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+#root {
+  width: 100%;
   min-height: 100vh;
 }
 
 h1 {
-  font-size: 4rem;
+  font-size: clamp(2rem, 5vw, 4rem);
   line-height: 1.1;
+  margin: 0;
 }
 
-h2{
-  
+h2 {
+  font-size: clamp(1.5rem, 4vw, 3rem);
+  margin: 0;
 }
 
-h3{
-  font-size: 1.5rem;
-  margin-bottom:0.2em;
+h3 {
+  font-size: clamp(1.2rem, 3vw, 1.5rem);
+  margin-bottom: 0.2em;
 }
 
 p {
-  font-size: 1rem;
-  
+  font-size: clamp(0.9rem, 2vw, 1rem);
 }
 
 button {
   border: 2px solid var(--c-secondary);
   border-radius: 10px;
   padding: 0.6em 1.2em;
-  font-size: 0.8rem;
+  font-size: clamp(0.7rem, 2vw, 0.8rem);
   font-weight: 500;
   font-family: inherit;
   background-color: var(--c-secondary);
   cursor: pointer;
   transition: 0.3s;
+  color: var(--c-white);
 }
+
 button:hover {
   background-color: var(--c-white);
-  color:  var(--c-black);
+  color: var(--c-black);
 }

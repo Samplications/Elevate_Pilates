@@ -1,13 +1,13 @@
 import { StrictMode, useEffect } from 'react';
-import { createRoot } from 'react-dom/client'
-import './index.css'
+import { createRoot } from 'react-dom/client';
+import './index.css';
 import {
   HashRouter as Router,
   Route,
   Routes,
   useLocation
 } from "react-router-dom";
-import App from './App.jsx'
+import App from './App.jsx';
 import Header from './components/Header.jsx';
 import Footer from './components/Footer.jsx';
 import ContactPage from './pages/ContactPage.jsx';
@@ -32,7 +32,7 @@ const RootComponent = () => (
     <ScrollToTop />
     <Routes>
       <Route exact path="/" element={<App />} />
-      <Route exact path="/Contact" element={<ContactPage/>} />
+      <Route exact path="/Contact" element={<ContactPage />} />
       <Route exact path="/Impressum" element={<ImpressumPage />} />
       <Route exact path="/Disclaimer" element={<DisclaimerPage />} />
       <Route exact path="/Privacy" element={<PrivacyPage />} />
