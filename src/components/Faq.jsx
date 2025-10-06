@@ -138,7 +138,7 @@ const FAQ = () => {
     {
       question: 'Warum Elevate?',
       answer:
-        'Das traditionelle Pilates Training wird mit Elevate noch einen Schritt weitergeführt. Zusätzlich zur Mobilisierung und Flexibilität werden dynamische Bewegungen eingebaut, die gezielte Muskelgruppen aktivieren. Hierbei wird darauf großen Wert gelegt, auf den eigen Körper zu hören - pushe Dich auf Dein höchstes Level oder gehe es langsamer an. Du bestimmst welche Variationen Du umsetzt, um Dein persönliches Fitnesslevel gerecht zu werden. Das Ziel ist es sich stärker, selbstbewusster und glücklicher nach jedem Training zu fühlen - unterstützt wird dies mit Gute Laune Musik :).',
+        'Das traditionelle Pilates Training wird mit Elevate noch einen Schritt weitergeführt. Zusätzlich zur Mobilisierung und Flexibilität werden dynamische Bewegungen eingebaut, die gezielte Muskelgruppen aktivieren. Hierbei wird darauf großen Wert gelegt, auf den eigen Körper zu hören - pushe Dich auf Dein höchstes Level oder gehe es langsamer an. Du bestimmst welche Variationen Du umsetzt, um Deinem persönlichen Fitnesslevel gerecht zu werden. Das Ziel ist es sich stärker, selbstbewusster und glücklicher nach jedem Training zu fühlen - unterstützt wird dies mit Gute Laune Musik :).',
     },
     {
       question: 'Für wen ist das Elevate Pilates Training geeignet?',

@@ -47,7 +47,6 @@ const ImpressumPage = () => {
       <h2>Kontakt:</h2>
       <p>
         E-Mail: elevate-pilates@outlook.com<br />
-        Telefon: TODO
       </p>
 
       <h2>Berufsbezeichnung und berufsrechtliche Regelungen:</h2>
@@ -57,7 +56,7 @@ const ImpressumPage = () => {
 
       <h2>Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:</h2>
       <p>
-        TODO
+        In Progress
       </p>
 
       <h2>Inhaltsverantwortlicher gemäß § 55 Abs. 2 RStV:</h2>

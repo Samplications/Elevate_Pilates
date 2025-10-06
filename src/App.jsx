@@ -394,7 +394,7 @@ function App() {
                     </ListItemDiv>
                     <ListItemDiv>
                       <IconSocks />
-                      <p>Rutschfeste Socken und Matte mitbringen</p>
+                      <p>Sportmatte (ideal), rutschfeste Socken/Barfuß (optional)</p>
                     </ListItemDiv>
                     <ListItemDiv>
                       <IconWorld />
