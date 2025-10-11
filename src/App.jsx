@@ -420,13 +420,6 @@ function App() {
                     <RateListItemDiv>
                       <ListItemDiv>
                         <IconWeights />
-                        <p>11. Oktober</p>
-                      </ListItemDiv>
-                      <p>~ Kostenlos</p>
-                    </RateListItemDiv>
-                    <RateListItemDiv>
-                      <ListItemDiv>
-                        <IconWeights />
                         <p>18. Oktober</p>
                       </ListItemDiv>
                       <p>~ Kostenlos</p>
