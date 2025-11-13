@@ -56,7 +56,7 @@ const ImpressumPage = () => {
 
       <h2>Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:</h2>
       <p>
-        In Progress
+        78 125 469 734
       </p>
 
       <h2>Inhaltsverantwortlicher gemäß § 55 Abs. 2 RStV:</h2>
