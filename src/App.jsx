@@ -417,13 +417,7 @@ function App() {
                 <Subtitles>Kurstermine 2025</Subtitles>
                 <InfoDiv>
                   <ListDiv>
-                    <RateListItemDiv>
-                      <ListItemDiv>
-                        <IconWeights />
-                        <p>8. November</p>
-                      </ListItemDiv>
-                      <p>~ Kostenlos</p>
-                    </RateListItemDiv>
+                    
                     <RateListItemDiv>
                       <ListItemDiv>
                         <IconWeights />
