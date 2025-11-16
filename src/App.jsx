@@ -414,17 +414,32 @@ function App() {
 
             <RightDiv>
               <CardInner>
-                <Subtitles>Kurstermine 2025</Subtitles>
+                <Subtitles>Kurstermine 2026</Subtitles>
                 <InfoDiv>
                   <ListDiv>
                     
                     <RateListItemDiv>
                       <ListItemDiv>
                         <IconWeights />
-                        <p>15. November</p>
+                        <p>3. Januar</p>
                       </ListItemDiv>
-                      <p>~ Kostenlos</p>
                     </RateListItemDiv>
+
+                    <RateListItemDiv>
+                      <ListItemDiv>
+                        <IconWeights />
+                        <p>10. Januar</p>
+                      </ListItemDiv>
+                    </RateListItemDiv>
+
+                    <RateListItemDiv>
+                      <ListItemDiv>
+                        <IconWeights />
+                        <p>17. Januar</p>
+                      </ListItemDiv>
+                    </RateListItemDiv>
+
+
                   </ListDiv>
                 </InfoDiv>
               </CardInner>
