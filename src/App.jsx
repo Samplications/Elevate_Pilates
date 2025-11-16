@@ -374,10 +374,7 @@ function App() {
               <div style={{ flex: 1 }}>
                 <Subtitles>Mitgliedschaften</Subtitles>
                 <RatesDiv>
-                  <RateListItemDiv>
-                    <p>➤ Alle 2025 Kurse</p>
-                    <FreeSpan>Kostenlos</FreeSpan>
-                  </RateListItemDiv>
+                  
                   <RateListItemDiv>
                     <p>➤ Drop-in Session</p>
                     <p>€ 20</p>
