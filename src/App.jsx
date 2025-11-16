@@ -1,7 +1,8 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import styled, { keyframes } from 'styled-components';
 import Hero from './components/Hero';
 import { Link as RouterLink } from 'react-router-dom';
+import axios from "axios";
 
 import IconCalendar from './assets/icons/calendar-svgrepo-com.svg?react';
 import IconSocks from './assets/icons/socks-svgrepo-com.svg?react';
@@ -344,6 +345,25 @@ const FatText = styled.p`
 `;
 
 function App() {
+
+  const [courseDates, setCourseDates] = useState([]);
+
+  const fetchCourseDates = async () => {
+    try {  
+    const response = await axios.get("https://openai-backend-6999.onrender.com/api/elevate-pilates/courses");
+    console.log(response);
+      setCourseDates(response.data.data);
+     } catch (error) {
+      console.error("Error calling API:", error);
+      const errorMessage = "Sorry, something went wrong. Please try again later.";
+      setCourseDates((prevCourses) => [...prevCourses, errorMessage]);
+    } 
+  };
+
+  useEffect(() => {
+    fetchCourseDates();
+  }, []);
+
   return (
     <PageDiv>
       <Hero />
@@ -417,28 +437,20 @@ function App() {
                 <Subtitles>Kurstermine 2026</Subtitles>
                 <InfoDiv>
                   <ListDiv>
-                    
-                    <RateListItemDiv>
-                      <ListItemDiv>
-                        <IconWeights />
-                        <p>3. Januar</p>
-                      </ListItemDiv>
-                    </RateListItemDiv>
 
-                    <RateListItemDiv>
-                      <ListItemDiv>
-                        <IconWeights />
-                        <p>10. Januar</p>
-                      </ListItemDiv>
-                    </RateListItemDiv>
-
-                    <RateListItemDiv>
-                      <ListItemDiv>
-                        <IconWeights />
-                        <p>17. Januar</p>
-                      </ListItemDiv>
-                    </RateListItemDiv>
-
+                    {courseDates && courseDates.length > 0 ? (
+                      courseDates.map((courseDate, index) => (
+                        <RateListItemDiv key={index}>
+                          <ListItemDiv>
+                            <IconWeights />
+                            <p>{courseDate.course_date}</p>
+                          </ListItemDiv>
+                          <button>Anmelden</button>
+                        </RateListItemDiv>
+                      ))
+                    ) : (
+                      <p>Keine Kurstermine verfügbar</p>
+                    )}
 
                   </ListDiv>
                 </InfoDiv>
