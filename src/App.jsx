@@ -3,6 +3,7 @@ import styled, { keyframes } from 'styled-components';
 import Hero from './components/Hero';
 import { Link as RouterLink } from 'react-router-dom';
 import axios from "axios";
+import ContactModal from './components/ContactModal';
 
 import IconCalendar from './assets/icons/calendar-svgrepo-com.svg?react';
 import IconSocks from './assets/icons/socks-svgrepo-com.svg?react';
@@ -347,7 +348,23 @@ const FatText = styled.p`
 function App() {
 
   const [courseDates, setCourseDates] = useState([]);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedCourse, setSelectedCourse] = useState("");
 
+  const handleOpenModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
+
+  const handleCourseSelect = (cdate) => {
+    setSelectedCourse(cdate);
+    handleOpenModal();
+  };
+  
+  // Fetch course dates from backend
   const fetchCourseDates = async () => {
     try {  
     const response = await axios.get("https://openai-backend-6999.onrender.com/api/elevate-pilates/courses");
@@ -366,6 +383,7 @@ function App() {
 
   return (
     <PageDiv>
+      <ContactModal isOpen={isModalOpen} onClose={handleCloseModal} registerCourse={selectedCourse}/>
       <Hero />
       <BubbleSection>
         <ContainerDiv>
@@ -382,6 +400,10 @@ function App() {
                   <RateListItemDiv>
                     <p>➤ 10er Pass</p>
                     <p>€ 150</p>
+                  </RateListItemDiv>
+                  <RateListItemDiv>
+                    <p>➤ Private Session (nach Absprache)</p>
+                    <p>€ 50/Std.</p>
                   </RateListItemDiv>
                 </RatesDiv>
               </div>
@@ -420,8 +442,7 @@ function App() {
                     <ListItemDiv>
                       <IconWrite />
                       <FatText>
-                        Teilnahme nur mit Anmeldung!<br />
-                        Max. 10 Teilnehmerinnen pro Kurs.
+                        Kostenlose Probestunde nach Vereinbarung
                       </FatText>
                     </ListItemDiv>
                   </ListDiv>
@@ -442,7 +463,7 @@ function App() {
                             <IconWeights />
                             <p>{courseDate.course_date}</p>
                           </ListItemDiv>
-                          <button>Anmelden</button>
+                          <button onClick={() => handleCourseSelect(courseDate.course_date)}>Anmelden</button>
                         </RateListItemDiv>
                       ))
                     ) : (
