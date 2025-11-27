@@ -203,7 +203,7 @@ function ContactModal({ isOpen, onClose, children, registerCourse }) {
           )}
           {error && (
             <ErrorMessage>
-              Beim Senden Deine Anmeldung ist ein Fehler aufgetreten. Bitte versuche es erneut.
+              Beim Senden Deiner Anmeldung ist ein Fehler aufgetreten. Bitte versuche es erneut.
             </ErrorMessage>
           )}
         </FormDiv>

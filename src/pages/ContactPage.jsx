@@ -14,7 +14,7 @@ const BackLink = styled(RouterLink)`
   align-items: center;
   justify-content: center;
   gap: 0.5em;
-  margin: 2em auto 0;
+  margin: 0 auto;
   width: fit-content;
   transition: opacity 0.3s;
 
@@ -45,7 +45,7 @@ const ContainerDiv = styled.div`
   gap: 1em;
   width: 100%;
   max-width: 1600px;
-  padding: clamp(1em, 3vw, 2em);
+  padding: clamp(1em, 3vw, 4em); clamp(1em, 3vw, 2em);
   box-sizing: border-box;
 `;
 

@@ -67,6 +67,29 @@ const SubHeadDiv = styled.div`
   }
 `;
 
+const SubHeadNavDiv = styled.div`
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: clamp(0.9rem, 2vw, 5rem);
+    justify-content: center;
+    align-content: center;
+`;
+
+const NavLink = styled(RouterLink)`
+  color: var(--c-white);
+  text-decoration: none;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  padding: 0.4em;
+  text-align: center;
+  
+  transition: opacity 0.3s;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+`;
+
 const Header = () => {
   return (
     <HeadDiv>
@@ -76,7 +99,11 @@ const Header = () => {
           <TitleBottomDiv>PILATES</TitleBottomDiv>
         </CenterDiv>
         <SubHeadDiv>
-          <p></p>
+          <SubHeadNavDiv>
+            <NavLink to="/">Home</NavLink>
+            <NavLink to="/Contact">Kontakt</NavLink>
+            <NavLink to="/Online-Kurse">Online Kurse</NavLink>
+          </SubHeadNavDiv>
         </SubHeadDiv>
       </AlignDiv>
     </HeadDiv>
