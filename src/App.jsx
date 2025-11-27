@@ -402,6 +402,10 @@ function App() {
                     <p>€ 150</p>
                   </RateListItemDiv>
                   <RateListItemDiv>
+                    <p>➤ Zugang Video Kurse</p>
+                    <p>€ 10/Monat</p>
+                  </RateListItemDiv>
+                  <RateListItemDiv>
                     <p>➤ Private Session (nach Absprache)</p>
                     <p>€ 50/Std.</p>
                   </RateListItemDiv>

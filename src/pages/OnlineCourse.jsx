@@ -298,7 +298,7 @@ const OnlineCourse = () => {
       <ContactModal
         isOpen={isModalOpen}
         onClose={handleCloseModal}
-        registerCourse="Online Kurse"
+        registerCourse="Video Kurse"
       />
       <ContainerDiv>
         {isLoggedIn ? (
@@ -356,7 +356,7 @@ const OnlineCourse = () => {
         ) : (
           <>
             <SectionTitle>
-              Zugang zu den <ElevateSpan>Online Kursen</ElevateSpan>
+              Zugang zu den <ElevateSpan>Video Kursen</ElevateSpan>
             </SectionTitle>
             <GridDiv>
               <FAQOuterCard>
@@ -365,7 +365,7 @@ const OnlineCourse = () => {
                     <input
                       type="hidden"
                       name="message"
-                      value={`I would like to sign up for the online classes`}
+                      value={`I would like to sign up for the video classes`}
                     />
                     <Input
                       type="text"

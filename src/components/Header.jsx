@@ -102,7 +102,7 @@ const Header = () => {
           <SubHeadNavDiv>
             <NavLink to="/">Home</NavLink>
             <NavLink to="/Contact">Kontakt</NavLink>
-            <NavLink to="/Online-Kurse">Online Kurse</NavLink>
+            <NavLink to="/Online-Kurse">Video Kurse</NavLink>
           </SubHeadNavDiv>
         </SubHeadDiv>
       </AlignDiv>
