@@ -216,14 +216,14 @@ const OnlineCourse = () => {
   const fetchTutorials = async () => {
     try {
       const response = await axios.get(
-        "https://openai-backend-6999.onrender.com/api/elevate-pilates/tutorials",
+        "https://zkesledkdsjhhoilmnga.supabase.co/functions/v1/elevate_tutorials",
         {
           params:{
               password: pswrd
           }
         }
       );
-      setTutorials(response.data.data);
+      setTutorials(response.data);
     } catch (error) {
       console.error("Error calling API:", error);
       const errorMessage =
@@ -236,14 +236,14 @@ const OnlineCourse = () => {
   const fetchWorkouts = async () => {
     try {
       const response = await axios.get(
-        "https://openai-backend-6999.onrender.com/api/elevate-pilates/workouts",
+        "https://zkesledkdsjhhoilmnga.supabase.co/functions/v1/elevate_workouts",
         {
           params:{
               password: pswrd
           }
         }
       );
-      setWorkouts(response.data.data);
+      setWorkouts(response.data);
     } catch (error) {
       console.error("Error calling API:", error);
       const errorMessage =

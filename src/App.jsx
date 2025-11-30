@@ -367,9 +367,9 @@ function App() {
   // Fetch course dates from backend
   const fetchCourseDates = async () => {
     try {  
-    const response = await axios.get("https://openai-backend-6999.onrender.com/api/elevate-pilates/courses");
+    const response = await axios.get("https://zkesledkdsjhhoilmnga.supabase.co/functions/v1/elevate_courses");
     console.log(response);
-      setCourseDates(response.data.data);
+      setCourseDates(response.data);
      } catch (error) {
       console.error("Error calling API:", error);
       const errorMessage = "Sorry, something went wrong. Please try again later.";
