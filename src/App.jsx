@@ -407,7 +407,7 @@ function App() {
                   </RateListItemDiv>
                   <RateListItemDiv>
                     <p>➤ Private Session (nach Absprache)</p>
-                    <p>€ 50/Std.</p>
+                    <p>€ 85/Std.</p>
                   </RateListItemDiv>
                 </RatesDiv>
               </div>
