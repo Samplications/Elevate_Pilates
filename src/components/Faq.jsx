@@ -145,11 +145,11 @@ const FAQ = () => {
       answer:
         'Das Training ist für Frauen jeden Alters und Fitnesslevel geeignet - Du entscheidest wie weit Du Dich pushen möchtest. In meinen Trainings gebe ich 110% und werde Dich motivieren das Beste in Dir in jedem Training herauszuholen.',
     },
-    {
-      question: 'Warum werden die Kurse in diesem Jahr kostenlos angeboten? Was ändert sich 2026?',
-      answer:
-        'Das Trainingsprogramm befindet sich in der Anlaufphase. Um Dir die faire Möglichkeit zu geben zu testen, ob Dir das Training gefällt und Du langfristig ein Teil der Elevate Community werden möchtest, werden die "Probekurse" kostenlos angeboten. Sobald Du deine Entscheidung getroffen hast, freue ich mich Dich ab 2026 als Mitglied in der Community willkommen zu heißen :)',
-    },
+    // {
+    //   question: 'Warum werden die Kurse in diesem Jahr kostenlos angeboten? Was ändert sich 2026?',
+    //   answer:
+    //     'Das Trainingsprogramm befindet sich in der Anlaufphase. Um Dir die faire Möglichkeit zu geben zu testen, ob Dir das Training gefällt und Du langfristig ein Teil der Elevate Community werden möchtest, werden die "Probekurse" kostenlos angeboten. Sobald Du deine Entscheidung getroffen hast, freue ich mich Dich ab 2026 als Mitglied in der Community willkommen zu heißen :)',
+    // },
     {
       question: 'Wie registriere ich mich für eine Mitgliedschaft?',
       answer:
