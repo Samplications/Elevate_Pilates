@@ -15,6 +15,8 @@ import IconWorld from './assets/icons/world-2-svgrepo-com.svg?react';
 
 import ImgJuliaLizenz from './assets/julia_lizenz.jpg';
 import FAQ from './components/Faq';
+import InfoModal from './components/InfoModal';
+
 
 const ButtonLink = styled(RouterLink)`
   border: 2px solid var(--c-secondary);
@@ -163,6 +165,7 @@ const Subtitles = styled.h2`
 
 const InfoDiv = styled.div`
   margin-top: 1em;
+  height: 100%;
 `;
 
 const RatesDiv = styled(InfoDiv)`
@@ -227,9 +230,10 @@ const SignupBtn = styled(ButtonLink)`
 
 const ListDiv = styled.div`
   display: flex;
-  justify-content: center;
   flex-direction: column;
-  gap: 0.5em;
+  gap: 0.7em;
+
+  height: 100%;
 `;
 
 const ListItemDiv = styled.div`
@@ -261,6 +265,7 @@ const RateListItemDiv = styled(ListItemDiv)`
   width: 100%;
   box-sizing: border-box;
   align-items: center;
+  margin-bottom: 0.3em;
 
   @media (max-width: 767px) {
     flex-direction: row;
@@ -345,10 +350,40 @@ const FatText = styled.p`
   font-weight: bold;
 `;
 
+const CourseDiv = styled.div`
+  width: 100%;
+  height: 400px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+
+  @media (max-width: 767px) {
+    height: auto;
+  }
+`;
+
+const CourseFrame = styled.iframe`
+  width: 100%;
+  height: 100%;
+  border: none;
+`;
+
+const CourseBtn = styled.button`
+  margin: 5px 20px 0 20px;
+  padding: 8px 16px;
+  background-color: var(--c-secondary);
+  color: var(--c-white);
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+`;
+
+
 function App() {
 
   const [courseDates, setCourseDates] = useState([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isModalContactOpenDefault, setIsModalContactOpen] = useState(true);
   const [selectedCourse, setSelectedCourse] = useState("");
 
   const handleOpenModal = () => {
@@ -359,30 +394,13 @@ function App() {
     setIsModalOpen(false);
   };
 
-  const handleCourseSelect = (cdate) => {
-    setSelectedCourse(cdate);
-    handleOpenModal();
+  const handleCloseModalContact = () => {
+    setIsModalContactOpen(false);
   };
-  
-  // Fetch course dates from backend
-  const fetchCourseDates = async () => {
-    try {  
-    const response = await axios.get("https://zkesledkdsjhhoilmnga.supabase.co/functions/v1/elevate_courses");
-    console.log(response);
-      setCourseDates(response.data);
-     } catch (error) {
-      console.error("Error calling API:", error);
-      const errorMessage = "Sorry, something went wrong. Please try again later.";
-      setCourseDates((prevCourses) => [...prevCourses, errorMessage]);
-    } 
-  };
-
-  useEffect(() => {
-    fetchCourseDates();
-  }, []);
 
   return (
     <PageDiv>
+      <InfoModal isOpen={isModalContactOpenDefault} onClose={handleCloseModalContact}/>
       <ContactModal isOpen={isModalOpen} onClose={handleCloseModal} registerCourse={selectedCourse}/>
       <Hero />
       <BubbleSection>
@@ -425,11 +443,11 @@ function App() {
                   <ListDiv>
                     <ListItemDiv>
                       <IconLocation />
-                      <p>Rheinstrasse 22, 3. OG, 64283 Darmstadt</p>
+                      <p>Alicenstraße 4, 64293 Darmstadt</p>
                     </ListItemDiv>
                     <ListItemDiv>
                       <IconCalendar />
-                      <p>Samstags: 9:30 - 10:30 Uhr</p>
+                      <p>Montag, Donnerstag und Samstag</p>
                     </ListItemDiv>
                     <ListItemDiv>
                       <IconFemale />
@@ -454,26 +472,22 @@ function App() {
               </CardInner>
             </LeftDiv>
 
-            <RightDiv>
+                        <RightDiv>
               <CardInner>
-                <Subtitles>Kurstermine 2026</Subtitles>
+                <Subtitles>Kurstermine</Subtitles>
                 <InfoDiv>
                   <ListDiv>
-
-                    {courseDates && courseDates.length > 0 ? (
-                      courseDates.map((courseDate, index) => (
-                        <RateListItemDiv key={index}>
-                          <ListItemDiv>
-                            <IconWeights />
-                            <p>{courseDate.course_date}</p>
-                          </ListItemDiv>
-                          <button onClick={() => handleCourseSelect(courseDate.course_date)}>Anmelden</button>
-                        </RateListItemDiv>
-                      ))
-                    ) : (
-                      <p>Keine Kurstermine verfügbar</p>
-                    )}
-
+                    <CourseDiv>
+                      <CourseFrame
+                        src="/Courses.pdf#toolbar=0&navpanes=0"
+                        title="Course Schedule"
+                      />
+                    </CourseDiv>
+                    <CourseBtn
+                      onClick={() => window.open("/Courses.pdf", "_blank")}
+                    >
+                      Vergrößern
+                    </CourseBtn>
                   </ListDiv>
                 </InfoDiv>
               </CardInner>

@@ -279,7 +279,7 @@ const ContactPage = () => {
                   <ListDiv>
                     <ListItemDiv>
                       <IconLocation />
-                      <p>Rheinstrasse 22, 3. OG, 64283 Darmstadt</p>
+                      <p>Alicenstraße 4, 64293 Darmstadt</p>
                     </ListItemDiv>
                     <ListItemDiv>
                       <IconEmail />

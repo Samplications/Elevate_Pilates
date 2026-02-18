@@ -38,6 +38,8 @@ const RootComponent = () => (
       <Route exact path="/Disclaimer" element={<DisclaimerPage />} />
       <Route exact path="/Privacy" element={<PrivacyPage />} />
       <Route exact path="/Online-Kurse" element={<OnlineCourse />} />
+
+      <Route path="*" element={<App />} />
     </Routes>
     <Footer />
   </>

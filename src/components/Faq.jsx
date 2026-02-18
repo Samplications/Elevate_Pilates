@@ -11,6 +11,7 @@ const FAQDiv = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: row;
+  margin: 3em 0 2em 0;
 `;
 
 const FAQOuterCard = styled.div`

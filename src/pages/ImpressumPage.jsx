@@ -39,8 +39,8 @@ const ImpressumPage = () => {
       <h2>Angaben gemäß § 5 TMG:</h2>
       <p>
         Julia Delarue<br />
-        Rheinstraße 22<br />
-        64283 Darmstadt<br />
+        Alicenstraße 4<br />
+        64293 Darmstadt<br />
         Deutschland
       </p>
 
@@ -62,8 +62,8 @@ const ImpressumPage = () => {
       <h2>Inhaltsverantwortlicher gemäß § 55 Abs. 2 RStV:</h2>
       <p>
         Julia Delarue<br />
-        Rheinstraße 22<br />
-        64283 Darmstadt<br />
+        Alicenstraße 4<br />
+        64293 Darmstadt<br />
         Deutschland
       </p>
     </ImpressumContainer>
