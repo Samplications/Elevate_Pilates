@@ -383,7 +383,7 @@ function App() {
 
   const [courseDates, setCourseDates] = useState([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [isModalContactOpenDefault, setIsModalContactOpen] = useState(true);
+  const [isModalContactOpenDefault, setIsModalContactOpen] = useState(false);
   const [selectedCourse, setSelectedCourse] = useState("");
 
   const handleOpenModal = () => {
