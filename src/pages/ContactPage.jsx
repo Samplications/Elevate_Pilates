@@ -299,7 +299,7 @@ const ContactPage = () => {
                     </ListItemDiv>
                     <ListItemDiv>
                       <IconInstagram />
-                      <p><HiddenLink>elevate_pilates_darmstadt</HiddenLink></p>
+                      <p><HiddenLink href='https://www.instagram.com/elevate_pilates_darmstadt/'>elevate_pilates_darmstadt</HiddenLink></p>
                     </ListItemDiv>
                     <ListItemDiv>
                       <IconFacebook />
