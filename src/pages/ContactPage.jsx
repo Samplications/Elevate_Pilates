@@ -3,6 +3,8 @@ import { Link as RouterLink } from 'react-router-dom';
 import styled from 'styled-components';
 import emailjs from '@emailjs/browser';
 import IconEmail from '../assets/icons/email-svgrepo-com.svg?react';
+import IconInstagram from '../assets/icons/instagram-svgrepo-com.svg?react';
+import IconFacebook from '../assets/icons/facebook-svgrepo-com.svg?react';
 import IconLocation from '../assets/icons/location-pin-alt-1-svgrepo-com.svg?react';
 import IconSend from '../assets/icons/send-svgrepo-com.svg?react';
 
@@ -237,6 +239,16 @@ const FAQOuterCard = styled.div`
   box-sizing: border-box;
 `;
 
+const HiddenLink = styled.a`
+  color: var(--c-black);
+  font-weight: 400;
+
+  &:hover{
+    color: var(--c-secondary);
+    font-weight: 500;
+  }
+`;
+
 const ContactPage = () => {
   const form = useRef();
   const [success, setSuccess] = useState(false);
@@ -284,6 +296,14 @@ const ContactPage = () => {
                     <ListItemDiv>
                       <IconEmail />
                       <p>elevate-pilates@outlook.com</p>
+                    </ListItemDiv>
+                    <ListItemDiv>
+                      <IconInstagram />
+                      <p><HiddenLink>elevate_pilates_darmstadt</HiddenLink></p>
+                    </ListItemDiv>
+                    <ListItemDiv>
+                      <IconFacebook />
+                      <p><HiddenLink href='https://www.facebook.com/profile.php?id=61576651850788&sk=about'>Elevate Pilates</HiddenLink></p>
                     </ListItemDiv>
                   </ListDiv>
                 </InfoDiv>
