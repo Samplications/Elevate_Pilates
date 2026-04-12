@@ -352,20 +352,18 @@ const FatText = styled.p`
 
 const CourseDiv = styled.div`
   width: 100%;
-  height: 400px;
+  height: auto;
   border: 1px solid #ddd;
   border-radius: 10px;
   overflow: hidden;
-
-  @media (max-width: 767px) {
-    height: auto;
-  }
 `;
 
-const CourseFrame = styled.iframe`
+const CourseFrame = styled.img`
   width: 100%;
-  height: 100%;
+  height: auto;
   border: none;
+  object-fit: contain;
+  display: block; // Remove whitespace below the image
 `;
 
 const CourseBtn = styled.button`
@@ -479,12 +477,15 @@ function App() {
                   <ListDiv>
                     <CourseDiv>
                       <CourseFrame
-                        src="/Courses.pdf#toolbar=0&navpanes=0"
-                        title="Course Schedule"
+                        src="/Courses.png"
+                        alt="Course Schedule"
                       />
                     </CourseDiv>
                     <CourseBtn
-                      onClick={() => window.open("/Courses.pdf", "_blank")}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        window.open("/Courses.pdf", "_blank")
+                      }}
                     >
                       Vergrößern
                     </CourseBtn>
