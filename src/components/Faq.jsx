@@ -127,6 +127,13 @@ const ContainerDiv = styled.div`
   box-sizing: border-box;
 `;
 
+const InstaLink = styled.a`
+  &:hover{
+    font-weight: bold;
+    color: var(--c-secondary);
+  }
+`;
+
 const FAQ = () => {
   const [openIndex, setOpenIndex] = useState(null);
 
@@ -134,17 +141,17 @@ const FAQ = () => {
     {
       question: 'Was ist Pilates?',
       answer:
-        'Es handelt sich bei Pilates um eine ganzheitliche Trainingsmethode entwickelt von Joseph Pilates. Der Fokus liegt dabei auf der Stärkung der Tiefenmuskulatur und kontrollierter Ausführung unter Berücksichtigung der Atemtechniken. Das sogenannte "Powerhouse" wird hierbei für die Dauer des gesamten Workouts aktiviert. Pilates mobilisiert und stärkt den Körper und ermöglicht mehr Flexibilität. Das Training kann auf der Matte stattfinden und Equipment wie z.B. Bälle, Bänder oder Gewichte einbeziehen.',
+        (<>Es handelt sich bei Pilates um eine ganzheitliche Trainingsmethode entwickelt von Joseph Pilates. Der Fokus liegt dabei auf der Stärkung der Tiefenmuskulatur und kontrollierter Ausführung unter Berücksichtigung der Atemtechniken. Das sogenannte "Powerhouse" wird hierbei für die Dauer des gesamten Workouts aktiviert. Pilates mobilisiert und stärkt den Körper und ermöglicht mehr Flexibilität. Das Training kann auf der Matte stattfinden und Equipment wie z.B. Bälle, Bänder oder Gewichte einbeziehen.</>),
     },
     {
       question: 'Warum Elevate?',
       answer:
-        'Das traditionelle Pilates Training wird mit Elevate noch einen Schritt weitergeführt. Zusätzlich zur Mobilisierung und Flexibilität werden dynamische Bewegungen eingebaut, die gezielte Muskelgruppen aktivieren. Hierbei wird darauf großen Wert gelegt, auf den eigen Körper zu hören - pushe Dich auf Dein höchstes Level oder gehe es langsamer an. Du bestimmst welche Variationen Du umsetzt, um Deinem persönlichen Fitnesslevel gerecht zu werden. Das Ziel ist es sich stärker, selbstbewusster und glücklicher nach jedem Training zu fühlen - unterstützt wird dies mit Gute Laune Musik :).',
+        (<>Das traditionelle Pilates Training wird mit Elevate noch einen Schritt weitergeführt. Zusätzlich zur Mobilisierung und Flexibilität werden dynamische Bewegungen eingebaut, die gezielte Muskelgruppen aktivieren. Hierbei wird darauf großen Wert gelegt, auf den eigen Körper zu hören - pushe Dich auf Dein höchstes Level oder gehe es langsamer an. Du bestimmst welche Variationen Du umsetzt, um Deinem persönlichen Fitnesslevel gerecht zu werden. Das Ziel ist es sich stärker, selbstbewusster und glücklicher nach jedem Training zu fühlen - unterstützt wird dies mit Gute Laune Musik :).</>),
     },
     {
       question: 'Für wen ist das Elevate Pilates Training geeignet?',
       answer:
-        'Das Training ist für Frauen jeden Alters und Fitnesslevel geeignet - Du entscheidest wie weit Du Dich pushen möchtest. In meinen Trainings gebe ich 110% und werde Dich motivieren das Beste in Dir in jedem Training herauszuholen.',
+        (<>Das Training ist für Frauen jeden Alters und Fitnesslevel geeignet - Du entscheidest wie weit Du Dich pushen möchtest. In meinen Trainings gebe ich 110% und werde Dich motivieren das Beste in Dir in jedem Training herauszuholen.</>),
     },
     // {
     //   question: 'Warum werden die Kurse in diesem Jahr kostenlos angeboten? Was ändert sich 2026?',
@@ -154,22 +161,22 @@ const FAQ = () => {
     {
       question: 'Wie registriere ich mich für eine Mitgliedschaft?',
       answer:
-        'Du kannst Dich entweder direkt nach dem Training für eine Mitgliedschaft anmelden oder alternativ eine E-Mail an elevate-pilates@outlook.com senden.',
+        (<>Du kannst Dich entweder direkt nach dem Training für eine Mitgliedschaft anmelden oder alternativ eine E-Mail an elevate-pilates@outlook.com senden.</>),
     },
     {
       question: 'Benötige ich Equipment (Matte, Gewichte,..) für das Training?',
       answer:
-        'Aktuell ist das Studio nicht genügend ausgestattet, um alle Teilnehmerinnen mit Equipment zu versorgen. Bringe daher bitte für das Training eine eigene Matte sowie idealerweise rutschfeste Socken mit. Ich persönlich trainiere am liebsten in rutschfesten Socken oder alternativ auch Barfuß. Sofern Du Manschetten ("Ankle Weights"), Resistance Bands, Pilates Bälle etc. hast, dann bringe diese gerne mit - damit hebst Du Dein Training nochmal auf ein höhere Stufe ;).',
+        (<>Aktuell ist das Studio nicht genügend ausgestattet, um alle Teilnehmerinnen mit Equipment zu versorgen. Bringe daher bitte für das Training eine eigene Matte sowie idealerweise rutschfeste Socken mit. Ich persönlich trainiere am liebsten in rutschfesten Socken oder alternativ auch Barfuß. Sofern Du Manschetten ("Ankle Weights"), Resistance Bands, Pilates Bälle etc. hast, dann bringe diese gerne mit - damit hebst Du Dein Training nochmal auf ein höhere Stufe ;).</>),
     },
     {
       question: 'Kann ich eine Einzelstunde buchen?',
       answer:
-        'Ja, auf Anfrage können Einzelstunden gebucht werden. Bei Interesse sende eine E-Mail an elevate-pilates@outlook.com mit dem Betreff "Anfrage Einzelstunde". Nach einer kurzen Absprache kann ich die Trainingseinheit auf Dein persönliches Level abstimmen und Deine Vorlieben und Wünsche integrieren.',
+        (<>Ja, auf Anfrage können Einzelstunden gebucht werden. Bei Interesse sende eine E-Mail an elevate-pilates@outlook.com mit dem Betreff "Anfrage Einzelstunde". Nach einer kurzen Absprache kann ich die Trainingseinheit auf Dein persönliches Level abstimmen und Deine Vorlieben und Wünsche integrieren.</>),
     },
     {
       question: 'Gibt es eine Elevate Community?',
       answer:
-        'Ja, auf Anfrage kannst Du zur WhatsApp Gruppe hinzugefügt werden. Eine Instagram Seite ist ebenfalls in Bearbeitung. Diese wird Dir in Zukunft unter anderem aktuelle Infos zum Trainingskalender gegeben sowie spannende Pilates Challenges und Tutorials bereithalten. Wir freuen uns Dich willkommen heißen zu dürfen! :)',
+        (<>Ja, auf Anfrage kannst Du zur WhatsApp Gruppe hinzugefügt werden. Folge Elevate Pilates auch auf Instagram (<InstaLink href='https://www.instagram.com/elevate_pilates_darmstadt/' target="_blank">@elevate_pilates_darmstadt</InstaLink>) für Updates & Event Announcements. Wir freuen uns Dich bald willkommen heißen zu dürfen! 🙂</>),
     },
   ];
 

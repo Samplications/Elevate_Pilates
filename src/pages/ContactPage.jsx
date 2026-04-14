@@ -299,11 +299,11 @@ const ContactPage = () => {
                     </ListItemDiv>
                     <ListItemDiv>
                       <IconInstagram />
-                      <p><HiddenLink href='https://www.instagram.com/elevate_pilates_darmstadt/'>elevate_pilates_darmstadt</HiddenLink></p>
+                      <p><HiddenLink href='https://www.instagram.com/elevate_pilates_darmstadt/' target="_blank">elevate_pilates_darmstadt</HiddenLink></p>
                     </ListItemDiv>
                     <ListItemDiv>
                       <IconFacebook />
-                      <p><HiddenLink href='https://www.facebook.com/profile.php?id=61576651850788&sk=about'>Elevate Pilates</HiddenLink></p>
+                      <p><HiddenLink href='https://www.facebook.com/profile.php?id=61576651850788&sk=about' target="_blank">Elevate Pilates</HiddenLink></p>
                     </ListItemDiv>
                   </ListDiv>
                 </InfoDiv>
