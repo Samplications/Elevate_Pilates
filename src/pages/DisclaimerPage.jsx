@@ -1,5 +1,7 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import styled from 'styled-components';
+
 
 const DisclaimerContainer = styled.div`
   max-width: 1200px;
@@ -43,6 +45,11 @@ const DisclaimerContainer = styled.div`
 
 const DisclaimerPage = () => {
   return (
+    <>
+    <Helmet>
+      <title>Disclaimer | Elevate Pilates</title>
+    </Helmet>
+    
     <DisclaimerContainer>
       <h1>Haftungsausschluss (Disclaimer)</h1>
 
@@ -122,6 +129,7 @@ const DisclaimerPage = () => {
         behördliche Vorgaben anzupassen. Wir empfehlen Ihnen, diese Seite regelmäßig zu besuchen, um sich über mögliche Änderungen zu informieren.
       </p>
     </DisclaimerContainer>
+    </>
   );
 };
 
