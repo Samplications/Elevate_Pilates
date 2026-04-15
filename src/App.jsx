@@ -16,6 +16,7 @@ import IconWorld from './assets/icons/world-2-svgrepo-com.svg?react';
 import ImgJuliaLizenz from './assets/julia_lizenz.jpg';
 import FAQ from './components/Faq';
 import InfoModal from './components/InfoModal';
+import { Helmet } from 'react-helmet-async';
 
 
 const ButtonLink = styled(RouterLink)`
@@ -397,6 +398,11 @@ function App() {
   };
 
   return (
+    <>
+    <Helmet>
+      <title>Home | Elevate Pilates</title>
+    </Helmet>
+    
     <PageDiv>
       <InfoModal isOpen={isModalContactOpenDefault} onClose={handleCloseModalContact}/>
       <ContactModal isOpen={isModalOpen} onClose={handleCloseModal} registerCourse={selectedCourse}/>
@@ -525,7 +531,9 @@ function App() {
 
       <FAQ />
     </PageDiv>
+    </>
   );
+  
 }
 
 export default App;

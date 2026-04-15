@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Helmet } from 'react-helmet-async';
 
 const ImpressumContainer = styled.div`
   max-width: 1200px;
@@ -33,7 +34,12 @@ const ImpressumContainer = styled.div`
 
 const ImpressumPage = () => {
   return (
+    <><Helmet>
+        <title>Impressum | Elevate Pilates</title>
+      </Helmet>
+      
     <ImpressumContainer>
+      
       <h1>Impressum</h1>
 
       <h2>Angaben gemäß § 5 TMG:</h2>
@@ -67,6 +73,7 @@ const ImpressumPage = () => {
         Deutschland
       </p>
     </ImpressumContainer>
+    </>
   );
 };
 

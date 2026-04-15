@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Helmet } from 'react-helmet-async';
 
 const PrivacyContainer = styled.div`
   max-width: 1200px;
@@ -43,6 +44,11 @@ const PrivacyContainer = styled.div`
 
 const PrivacyPage = () => {
   return (
+    <>
+    <Helmet>
+        {/* Standard SEO Tags */}
+        <title>Privacy | Elevate Pilates</title>
+      </Helmet>
     <PrivacyContainer>
       <h1>Datenschutzerklärung</h1>
 
@@ -285,6 +291,7 @@ const PrivacyPage = () => {
         Zwingende gesetzliche Bestimmungen – insbesondere Aufbewahrungsfristen – bleiben unberührt.
       </p>
     </PrivacyContainer>
+    </>
   );
 };
 

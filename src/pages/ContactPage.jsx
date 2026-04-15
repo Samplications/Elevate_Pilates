@@ -7,6 +7,7 @@ import IconInstagram from '../assets/icons/instagram-svgrepo-com.svg?react';
 import IconFacebook from '../assets/icons/facebook-svgrepo-com.svg?react';
 import IconLocation from '../assets/icons/location-pin-alt-1-svgrepo-com.svg?react';
 import IconSend from '../assets/icons/send-svgrepo-com.svg?react';
+import { Helmet } from 'react-helmet-async';
 
 const BackLink = styled(RouterLink)`
   color: var(--c-black);
@@ -278,6 +279,29 @@ const ContactPage = () => {
   };
 
   return (
+    <>
+      <Helmet>
+        {/* Standard SEO Tags */}
+        <title>Kontakt | Elevate Pilates</title>
+        <meta name="description" content="Kontaktiere Elevate Pilates in Darmstadt für Fragen zu Kursen, Anmeldungen oder Kooperationen. Besuche uns in der Alicenstraße 4 oder schreibe uns eine Nachricht." />
+        <meta name="keywords" content="Pilates, Darmstadt, Kontakt, Elevate Pilates, Kursanfrage, Studio" />
+
+        {/* Open Graph (OG) Tags for Social Sharing */}
+        <meta property="og:title" content="Kontakt | Elevate Pilates" />
+        <meta property="og:description" content="Kontaktiere Elevate Pilates in Darmstadt für Fragen zu Kursen, Anmeldungen oder Kooperationen." />
+        <meta property="og:url" content="https://elevate-pilates.de/contakt" /> {/* Replace with your actual URL */}
+
+        {/* Twitter Card Tags */}
+        <meta name="twitter:title" content="Kontakt | Elevate Pilates" />
+        <meta name="twitter:description" content="Kontaktiere Elevate Pilates in Darmstadt für Fragen zu Kursen, Anmeldungen oder Kooperationen." />
+
+        {/* Canonical URL */}
+        <link rel="canonical" href="https://elevate-pilates.de/kontakt" /> {/* Replace with your actual URL */}
+
+        {/* Language Tag */}
+        <html lang="de" />
+      </Helmet>
+    
     <PageDiv>
       <ContainerDiv>
         <SectionTitle>
@@ -349,6 +373,7 @@ const ContactPage = () => {
         <BackLink to="/">Zurück zur Homepage</BackLink>
       </ContainerDiv>
     </PageDiv>
+    </>
   );
 };
 

@@ -3,10 +3,10 @@ import { useState, useEffect, useRef } from "react";
 import styled, { keyframes } from "styled-components";
 import { Link as RouterLink } from "react-router-dom";
 import axios from "axios";
-import emailjs from "@emailjs/browser";
 import IconSend from "../assets/icons/send-svgrepo-com.svg?react";
 import ContactModal from "../components/ContactModal";
 import VideoEmbed from "../components/VideoEmbed";
+import { Helmet } from 'react-helmet-async';
 
 const BackLink = styled(RouterLink)`
   color: var(--c-black);
@@ -294,6 +294,29 @@ const OnlineCourse = () => {
   };
 
   return (
+    <>
+    <Helmet>
+        {/* Standard SEO Tags */}
+        <title>Online Kurse | Elevate Pilates</title>
+        <meta name="description" content="Entdecke unsere Online-Kurse für Pilates: Technik-Tutorials und Follow-Along-Workouts. Melde dich an und trainiere flexibel von zu Hause aus." />
+        <meta name="keywords" content="Pilates, Online Kurse, Technik Tutorials, Workouts, Elevate Pilates, Darmstadt, Video Kurse" />
+
+        {/* Open Graph (OG) Tags for Social Sharing */}
+        <meta property="og:title" content="Online Kurse | Elevate Pilates" />
+        <meta property="og:description" content="Entdecke unsere Online-Kurse für Pilates: Technik-Tutorials und Follow-Along-Workouts. Melde dich an und trainiere flexibel von zu Hause aus." />
+        <meta property="og:url" content="https://elevate-pilates.de/online-kurse" />
+
+        {/* Twitter Card Tags */}
+        <meta name="twitter:title" content="Online Kurse | Elevate Pilates" />
+        <meta name="twitter:description" content="Entdecke unsere Online-Kurse für Pilates: Technik-Tutorials und Follow-Along-Workouts. Melde dich an und trainiere flexibel von zu Hause aus." />
+
+        {/* Canonical URL */}
+        <link rel="canonical" href="https://elevate-pilates.de/online-kurse" />
+
+        {/* Language Tag */}
+        <html lang="de" />
+      </Helmet>
+
     <PageDiv>
       <ContactModal
         isOpen={isModalOpen}
@@ -404,6 +427,7 @@ const OnlineCourse = () => {
         )}
       </ContainerDiv>
     </PageDiv>
+    </>
   );
 };
 

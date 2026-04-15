@@ -2,7 +2,7 @@ import { StrictMode, useEffect } from 'react';
 import { createRoot } from 'react-dom/client';
 import './index.css';
 import {
-  HashRouter as Router,
+  BrowserRouter as Router,
   Route,
   Routes,
   useLocation
