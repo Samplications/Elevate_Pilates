@@ -33,11 +33,11 @@ const RootComponent = () => (
     <ScrollToTop />
     <Routes>
       <Route exact path="/" element={<App />} />
-      <Route exact path="/Contact" element={<ContactPage />} />
-      <Route exact path="/Impressum" element={<ImpressumPage />} />
-      <Route exact path="/Disclaimer" element={<DisclaimerPage />} />
-      <Route exact path="/Privacy" element={<PrivacyPage />} />
-      <Route exact path="/Online-Kurse" element={<OnlineCourse />} />
+      <Route exact path="/contact" element={<ContactPage />} />
+      <Route exact path="/impressum" element={<ImpressumPage />} />
+      <Route exact path="/disclaimer" element={<DisclaimerPage />} />
+      <Route exact path="/privacy" element={<PrivacyPage />} />
+      <Route exact path="/online-Kurse" element={<OnlineCourse />} />
 
       <Route path="*" element={<App />} />
     </Routes>

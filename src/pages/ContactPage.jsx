@@ -289,14 +289,16 @@ const ContactPage = () => {
         {/* Open Graph (OG) Tags for Social Sharing */}
         <meta property="og:title" content="Kontakt | Elevate Pilates" />
         <meta property="og:description" content="Kontaktiere Elevate Pilates in Darmstadt für Fragen zu Kursen, Anmeldungen oder Kooperationen." />
-        <meta property="og:url" content="https://elevate-pilates.de/contakt" /> {/* Replace with your actual URL */}
+        <meta property="og:url" content="https://elevate-pilates.de/contact" /> {/* Replace with your actual URL */}
+
+        <link rel="canonical" href="https://www.elevate-pilates.de/contact" />
 
         {/* Twitter Card Tags */}
         <meta name="twitter:title" content="Kontakt | Elevate Pilates" />
         <meta name="twitter:description" content="Kontaktiere Elevate Pilates in Darmstadt für Fragen zu Kursen, Anmeldungen oder Kooperationen." />
 
         {/* Canonical URL */}
-        <link rel="canonical" href="https://elevate-pilates.de/kontakt" /> {/* Replace with your actual URL */}
+        <link rel="canonical" href="https://elevate-pilates.de/contact" /> {/* Replace with your actual URL */}
 
         {/* Language Tag */}
         <html lang="de" />

@@ -434,7 +434,7 @@ function App() {
                 </RatesDiv>
               </div>
               <ParentDiv>
-                <SignupBtn to="/Contact">Jetzt Anmelden!</SignupBtn>
+                <SignupBtn to="/contact">Jetzt Anmelden!</SignupBtn>
               </ParentDiv>
             </CardInnerTop>
           </TopRowDiv>
@@ -518,7 +518,7 @@ function App() {
                   <br /><br />
                   - Julia, Gründer <ElevateSpanTxt>Elevate</ElevateSpanTxt> Pilates
                 </AboutTxt>
-                <AboutCTABtn to="/Contact">Worauf wartest Du noch?</AboutCTABtn>
+                <AboutCTABtn to="/contact">Worauf wartest Du noch?</AboutCTABtn>
               </TextDiv>
 
               <ImgDiv>

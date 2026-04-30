@@ -149,7 +149,7 @@ const Footer = () => {
             <p>By Julia Delarue</p>
           </FooterSection>
           <FooterSection>
-            <ButtonLink to="/Contact">Kontakt</ButtonLink>
+            <ButtonLink to="/contact">Kontakt</ButtonLink>
           </FooterSection>
         </FooterTop>
 
@@ -166,9 +166,9 @@ const Footer = () => {
         <FooterBottom>
           <p>&copy; {currentYear} Elevate Pilates</p>
           <p>
-            <FooterLink to="/Impressum">Impressum</FooterLink> |{' '}
-            <FooterLink to="/Privacy">Privacy Statement</FooterLink> |{' '}
-            <FooterLink to="/Disclaimer">Disclaimer</FooterLink>
+            <FooterLink to="/impressum">Impressum</FooterLink> |{' '}
+            <FooterLink to="/privacy">Privacy Statement</FooterLink> |{' '}
+            <FooterLink to="/disclaimer">Disclaimer</FooterLink>
           </p>
         </FooterBottom>
       </FooterContent>
