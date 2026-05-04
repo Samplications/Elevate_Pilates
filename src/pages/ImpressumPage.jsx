@@ -35,7 +35,7 @@ const ImpressumContainer = styled.div`
 const ImpressumPage = () => {
   return (
     <><Helmet>
-        <title>Impressum | Elevate Pilates</title>
+        <title>Impressum | Elevate Pilates Darmstadt</title>
       </Helmet>
       
     <ImpressumContainer>

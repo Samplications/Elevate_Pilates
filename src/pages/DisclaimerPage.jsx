@@ -47,7 +47,7 @@ const DisclaimerPage = () => {
   return (
     <>
     <Helmet>
-      <title>Disclaimer | Elevate Pilates</title>
+      <title>Disclaimer | Elevate Pilates Darmstadt</title>
     </Helmet>
     
     <DisclaimerContainer>

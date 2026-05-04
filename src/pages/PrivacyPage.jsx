@@ -47,7 +47,7 @@ const PrivacyPage = () => {
     <>
     <Helmet>
         {/* Standard SEO Tags */}
-        <title>Privacy | Elevate Pilates</title>
+        <title>Privacy | Elevate Pilates Darmstadt</title>
       </Helmet>
     <PrivacyContainer>
       <h1>Datenschutzerklärung</h1>
