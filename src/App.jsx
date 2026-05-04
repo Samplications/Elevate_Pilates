@@ -400,7 +400,7 @@ function App() {
   return (
     <>
     <Helmet>
-      <title>Home | Elevate Pilates</title>
+      <title>Home | Elevate Pilates Darmstadt</title>
     </Helmet>
     
     <PageDiv>

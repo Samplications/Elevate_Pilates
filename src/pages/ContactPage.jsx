@@ -282,9 +282,9 @@ const ContactPage = () => {
     <>
       <Helmet>
         {/* Standard SEO Tags */}
-        <title>Kontakt | Elevate Pilates</title>
+        <title>Kontakt | Elevate Pilates Darmstadt</title>
         <meta name="description" content="Kontaktiere Elevate Pilates in Darmstadt für Fragen zu Kursen, Anmeldungen oder Kooperationen. Besuche uns in der Alicenstraße 4 oder schreibe uns eine Nachricht." />
-        <meta name="keywords" content="Pilates, Darmstadt, Kontakt, Elevate Pilates, Kursanfrage, Studio" />
+        <meta name="keywords" content="Pilates, Darmstadt, Kontakt, Elevate Pilates, Kursanfrage, Pilates Studio, Frauen, Mat Pilates" />
 
         {/* Open Graph (OG) Tags for Social Sharing */}
         <meta property="og:title" content="Kontakt | Elevate Pilates" />

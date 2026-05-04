@@ -297,9 +297,9 @@ const OnlineCourse = () => {
     <>
     <Helmet>
         {/* Standard SEO Tags */}
-        <title>Online Kurse | Elevate Pilates</title>
+        <title>Online Kurse | Elevate Pilates Darmstadt</title>
         <meta name="description" content="Entdecke unsere Online-Kurse für Pilates: Technik-Tutorials und Follow-Along-Workouts. Melde dich an und trainiere flexibel von zu Hause aus." />
-        <meta name="keywords" content="Pilates, Online Kurse, Technik Tutorials, Workouts, Elevate Pilates, Darmstadt, Video Kurse" />
+        <meta name="keywords" content="Pilates, Online Kurse, Technik Tutorials, Workouts, Elevate Pilates, Darmstadt, Video Kurse, Mat Pilates" />
 
         {/* Open Graph (OG) Tags for Social Sharing */}
         <meta property="og:title" content="Online Kurse | Elevate Pilates" />
