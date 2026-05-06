@@ -55,10 +55,6 @@ const ContentDiv = styled.div`
   justify-content: center;
   flex-direction: row;
   
-  h1 {
-    margin: 1.2rem 0 0.75rem 0;
-  }
-  
   p {
     margin: 0 0 0.75rem 0;
     padding: 0;

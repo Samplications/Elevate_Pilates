@@ -141,43 +141,79 @@ const FAQ = () => {
     {
       question: 'Was ist Pilates?',
       answer:
-        (<>Es handelt sich bei Pilates um eine ganzheitliche Trainingsmethode entwickelt von Joseph Pilates. Der Fokus liegt dabei auf der Stärkung der Tiefenmuskulatur und kontrollierter Ausführung unter Berücksichtigung der Atemtechniken. Das sogenannte "Powerhouse" wird hierbei für die Dauer des gesamten Workouts aktiviert. Pilates mobilisiert und stärkt den Körper und ermöglicht mehr Flexibilität. Das Training kann auf der Matte stattfinden und Equipment wie z.B. Bälle, Bänder oder Gewichte einbeziehen.</>),
+        (<>
+        Es handelt sich bei Pilates um eine ganzheitliche Trainingsmethode, entwickelt von Joseph Pilates unter der Bezeichnung "Contrology". Der Fokus liegt dabei auf der Stärkung der Tiefenmuskulatur und der kontrollierten Ausführung bewusster Bewegungen unter Berücksichtigung der Atemtechnik. Das sogenannte „Powerhouse“ wird hierbei für die Dauer des gesamten Workouts aktiviert. Pilates mobilisiert und stärkt den Körper und ermöglicht mehr Flexibilität. Das klassische Pilates wird auf der Matte praktiziert und durch Equipment wie z. B. Bälle, Bänder oder Gewichte zusätzlich unterstützt.
+        </>),
     },
     {
-      question: 'Warum Elevate?',
+      question: 'Warum Elevate Pilates?',
       answer:
-        (<>Das traditionelle Pilates Training wird mit Elevate noch einen Schritt weitergeführt. Zusätzlich zur Mobilisierung und Flexibilität werden dynamische Bewegungen eingebaut, die gezielte Muskelgruppen aktivieren. Hierbei wird darauf großen Wert gelegt, auf den eigen Körper zu hören - pushe Dich auf Dein höchstes Level oder gehe es langsamer an. Du bestimmst welche Variationen Du umsetzt, um Deinem persönlichen Fitnesslevel gerecht zu werden. Das Ziel ist es sich stärker, selbstbewusster und glücklicher nach jedem Training zu fühlen - unterstützt wird dies mit Gute Laune Musik :).</>),
+        (<>
+        Das traditionelle Pilates wird mit Elevate noch einen Schritt weitergeführt. Zusätzlich zur Mobilisierung und Flexibilität werden dynamische Bewegungen eingebaut, die gezielt Muskelgruppen aktivieren. Dabei wird großer Wert darauf gelegt, auf den eigenen Körper zu hören – pushe dich auf dein höchstes Level oder gehe es langsamer an. du bestimmst, welche Variationen und Modifikationen du umsetzt, um deinem persönlichen Fitnesslevel gerecht zu werden.
+        <br/>
+        Das Ziel ist es, sich nach jedem Training stärker, selbstbewusster und glücklicher zu fühlen – unterstützt durch gute Laune Musik 🙂.
+        </>),
     },
     {
-      question: 'Für wen ist das Elevate Pilates Training geeignet?',
+      question: 'Für wen ist Elevate Pilates geeignet?',
       answer:
-        (<>Das Training ist für Frauen jeden Alters und Fitnesslevel geeignet - Du entscheidest wie weit Du Dich pushen möchtest. In meinen Trainings gebe ich 110% und werde Dich motivieren das Beste in Dir in jedem Training herauszuholen.</>),
-    },
-    // {
-    //   question: 'Warum werden die Kurse in diesem Jahr kostenlos angeboten? Was ändert sich 2026?',
-    //   answer:
-    //     'Das Trainingsprogramm befindet sich in der Anlaufphase. Um Dir die faire Möglichkeit zu geben zu testen, ob Dir das Training gefällt und Du langfristig ein Teil der Elevate Community werden möchtest, werden die "Probekurse" kostenlos angeboten. Sobald Du deine Entscheidung getroffen hast, freue ich mich Dich ab 2026 als Mitglied in der Community willkommen zu heißen :)',
-    // },
-    {
-      question: 'Wie registriere ich mich für eine Mitgliedschaft?',
-      answer:
-        (<>Du kannst Dich entweder direkt nach dem Training für eine Mitgliedschaft anmelden oder alternativ eine E-Mail an elevate-pilates@outlook.com senden.</>),
+        (<>
+        Die angebotenen Kurse sind für Frauen jeden Alters und Fitnesslevels geeignet – du entscheidest, wie weit du dich pushen möchtest. In meinen Trainings gebe ich 110 % und werde dich motivieren, das Beste aus dir in jedem Kurs herauszuholen. Egal, ob du Beginner, Intermediate oder Advanced bist, bist du im Kurs willkommen und gut aufgehoben.
+        </>),
     },
     {
-      question: 'Benötige ich Equipment (Matte, Gewichte,..) für das Training?',
+      question: 'Was ist der Unterschied zwischen Pilates auf der Matte und dem Reformer?',
       answer:
-        (<>Aktuell ist das Studio nicht genügend ausgestattet, um alle Teilnehmerinnen mit Equipment zu versorgen. Bringe daher bitte für das Training eine eigene Matte sowie idealerweise rutschfeste Socken mit. Ich persönlich trainiere am liebsten in rutschfesten Socken oder alternativ auch Barfuß. Sofern Du Manschetten ("Ankle Weights"), Resistance Bands, Pilates Bälle etc. hast, dann bringe diese gerne mit - damit hebst Du Dein Training nochmal auf ein höhere Stufe ;).</>),
+        (<>
+        Die von Joseph Pilates entwickelte Methode findet ihren Ursprung auf der Matte. Du nutzt dein eigenes Körpergewicht, um die Bewegung auszuführen und zu kontrollieren. Der Reformer wurde als Instrument zur Unterstützung, vor allem im Rehabilitationsbereich, entwickelt und bietet Widerstand und Führung durch Anwendung von Federn und Seilzügen. Beide Methoden helfen dem Körper Mobilität, Kraft und Balance aufzubauen. In der aktuellen Zeit wir Reformer-Pilates daher oft irrtümlicherweise als "Fortgeschritten" und Matten-Pilates als "Anfänger" bezeichnet. Dies ist jedoch nicht der Fall.
+        <br/>
+        Elevate ist auf Basis der klassischen Methode des Matten-Pilates konzipiert. Diese verlangt mehr Eigenkontrolle und Konzentration ab, da das Feedback der Bewegung direkt von deinem eigenen Körper ohne äußere Einwirkung erfolgt und gesteuert werden kann.
+        </>),
+    },
+    {
+      question: 'Wie kann ich mich für einen Kurs anmelden?',
+      answer:
+        (<>
+        Du kannst dich entweder direkt nach deinem ersten kostenlosen Probekurs für eine Mitgliedschaft anmelden oder alternativ eine E-Mail an <InstaLink href='mailto:elevate-pilates@outlook.com'>elevate-pilates@outlook.com</InstaLink> senden.
+        </>),
+    },
+    {
+      question: 'Was sollte ich zum Kurs mitbringen?',
+      answer:
+        (<>
+        Am besten bringst du eine eigene Matte sowie idealerweise rutschfeste Socken mit. Solltest du aber mal deine Matte vergessen oder keine eigene besitzen, stehen dir Matten im Studio zur Verfügung.
+        Ansonsten brauchst du dich um nichts zu kümmern und kannst direkt zum Kurs erscheinen. Equipment steht im Studio zur Verfügung und wird nach jedem Kurs gründlich desinfiziert und gereinigt.
+        </>),
+    },
+    {
+      question: 'Gibt es Umkleidemöglichkeiten im Studio?',
+      answer:
+        (<>
+        Im Studio gibt es zwei große Badezimmer, in denen du dich auch umkleiden kannst. Dort steht dir jederzeit eine Auswahl an Hygieneprodukten bereit, sodass du rundum sorgenfrei bleibst.
+        </>),
     },
     {
       question: 'Kann ich eine Einzelstunde buchen?',
       answer:
-        (<>Ja, auf Anfrage können Einzelstunden gebucht werden. Bei Interesse sende eine E-Mail an elevate-pilates@outlook.com mit dem Betreff "Anfrage Einzelstunde". Nach einer kurzen Absprache kann ich die Trainingseinheit auf Dein persönliches Level abstimmen und Deine Vorlieben und Wünsche integrieren.</>),
+        (<>
+        Ja, auf Anfrage können Einzelstunden gebucht werden. Bei Interesse sende eine E-Mail an <InstaLink href='mailto:elevate-pilates@outlook.com'>elevate-pilates@outlook.com</InstaLink> mit dem Betreff "Anfrage Einzelstunde". Nach einer kurzen Absprache kann ich die Kurseinheit auf dein persönliches Level abstimmen sowie deine Ziele und Wünsche integrieren.
+        </>),
     },
     {
       question: 'Gibt es eine Elevate Community?',
       answer:
-        (<>Ja, auf Anfrage kannst Du zur WhatsApp Gruppe hinzugefügt werden. Folge Elevate Pilates auch auf Instagram (<InstaLink href='https://www.instagram.com/elevate_pilates_darmstadt/' target="_blank">@elevate_pilates_darmstadt</InstaLink>) für Updates & Event Announcements. Wir freuen uns Dich bald willkommen heißen zu dürfen! 🙂</>),
+        (<>
+        Ja, auf Anfrage kannst du zur WhatsApp-Gruppe hinzugefügt werden. Folge Elevate Pilates auch auf Instagram (<InstaLink href='https://www.instagram.com/elevate_pilates_darmstadt/' target="_blank">@elevate_pilates_darmstadt</InstaLink>) für Updates & Event Announcements. Wir freuen uns dich bald in der Elevate Family willkommen heißen zu dürfen! 🙂
+        </>),
     },
+    {
+      question: 'Wie gelange ich am besten zum Studio? und gibt es Parkmöglichkeiten?',
+      answer:
+        (<>
+        Das Studio befindet sich direkt im Herzen von Darmstadt neben dem Herrngarten. Parkplätze sind in der Straße vorhanden. Beachte bitte, dass diese zu bestimmten Tageszeiten kostenpflichtig sein können. Solltest du mit dem Fahrrad unterwegs sein, befinden sich direkt in der Alicenstraße Möglichkeiten zum Anschließen, alternativ auch in der Viktoriastraße vor der Geotheschule. Mit der Straßenbahn erreichst du das Studio bequem über den Willy-Brandt-Platz oder die Pallaswiesenstraße.
+        </>),
+    },
+    
   ];
 
   const toggleFAQ = (index) => {
