@@ -1,11 +1,11 @@
-import React from "react";
-import { useState, useEffect, useRef } from "react";
-import styled, { keyframes } from "styled-components";
-import { Link as RouterLink } from "react-router-dom";
-import axios from "axios";
-import IconSend from "../assets/icons/send-svgrepo-com.svg?react";
-import ContactModal from "../components/ContactModal";
-import VideoEmbed from "../components/VideoEmbed";
+import React from 'react';
+import { useState, useEffect, useRef } from 'react';
+import styled, { keyframes } from 'styled-components';
+import { Link as RouterLink } from 'react-router-dom';
+import axios from 'axios';
+import IconSend from '../assets/icons/send-svgrepo-com.svg?react';
+import ContactModal from '../components/ContactModal';
+import VideoEmbed from '../components/VideoEmbed';
 import { Helmet } from 'react-helmet-async';
 
 const BackLink = styled(RouterLink)`
@@ -26,7 +26,7 @@ const BackLink = styled(RouterLink)`
   }
 
   &::before {
-    content: "←";
+    content: '←';
     font-size: 1.2rem;
   }
 `;
@@ -210,24 +210,24 @@ const OnlineCourse = () => {
   const [tutorialsVids, setTutorials] = useState([]);
   const [workoutVids, setWorkouts] = useState([]);
 
-  const pswrd = "Elevate25";
+  const pswrd = 'Elevate25';
 
   // Fetch tutorials from backend
   const fetchTutorials = async () => {
     try {
       const response = await axios.get(
-        "https://zkesledkdsjhhoilmnga.supabase.co/functions/v1/elevate_tutorials",
+        'https://zkesledkdsjhhoilmnga.supabase.co/functions/v1/elevate_tutorials',
         {
           params:{
-              password: pswrd
-          }
-        }
+              password: pswrd,
+          },
+        },
       );
       setTutorials(response.data);
     } catch (error) {
-      console.error("Error calling API:", error);
+      console.error('Error calling API:', error);
       const errorMessage =
-        "Sorry, something went wrong. Please try again later.";
+        'Sorry, something went wrong. Please try again later.';
       setTutorials((prevtTutorials) => [...prevtTutorials, errorMessage]);
     }
   };
@@ -236,18 +236,18 @@ const OnlineCourse = () => {
   const fetchWorkouts = async () => {
     try {
       const response = await axios.get(
-        "https://zkesledkdsjhhoilmnga.supabase.co/functions/v1/elevate_workouts",
+        'https://zkesledkdsjhhoilmnga.supabase.co/functions/v1/elevate_workouts',
         {
           params:{
-              password: pswrd
-          }
-        }
+              password: pswrd,
+          },
+        },
       );
       setWorkouts(response.data);
     } catch (error) {
-      console.error("Error calling API:", error);
+      console.error('Error calling API:', error);
       const errorMessage =
-        "Sorry, something went wrong. Please try again later.";
+        'Sorry, something went wrong. Please try again later.';
       setWorkouts((prevWorkouts) => [...prevWorkouts, errorMessage]);
     }
   };
@@ -277,17 +277,17 @@ const OnlineCourse = () => {
     const username = e.target.user_name.value;
     const password = e.target.password.value;
 
-    if ("Surprise" === username) {
+    if ('Surprise' === username) {
       if (password === pswrd) {
         form.current.reset();
         setLoggedIn(true);
       } else {
         setError(true);
-        console.log("Wrong password");
+        console.log('Wrong password');
       }
     } else {
       setError(true);
-      console.log("Wrong username");
+      console.log('Wrong username');
     }
 
     setIsSubmitting(false);
@@ -298,30 +298,30 @@ const OnlineCourse = () => {
     <Helmet>
         {/* Standard SEO Tags */}
         <title>Online Kurse | Elevate Pilates Darmstadt</title>
-        <meta name="description" content="Entdecke unsere Online-Kurse für Pilates: Technik-Tutorials und Follow-Along-Workouts. Melde dich an und trainiere flexibel von zu Hause aus." />
-        <meta name="keywords" content="Pilates, Online Kurse, Technik Tutorials, Workouts, Elevate Pilates, Darmstadt, Video Kurse, Mat Pilates" />
+        <meta name='description' content='Entdecke unsere Online-Kurse für Pilates: Technik-Tutorials und Follow-Along-Workouts. Melde dich an und trainiere flexibel von zu Hause aus.' />
+        <meta name='keywords' content='Pilates, Online Kurse, Technik Tutorials, Workouts, Elevate Pilates, Darmstadt, Video Kurse, Mat Pilates' />
 
         {/* Open Graph (OG) Tags for Social Sharing */}
-        <meta property="og:title" content="Online Kurse | Elevate Pilates" />
-        <meta property="og:description" content="Entdecke unsere Online-Kurse für Pilates: Technik-Tutorials und Follow-Along-Workouts. Melde dich an und trainiere flexibel von zu Hause aus." />
-        <meta property="og:url" content="https://elevate-pilates.de/online-kurse" />
+        <meta property='og:title' content='Online Kurse | Elevate Pilates' />
+        <meta property='og:description' content='Entdecke unsere Online-Kurse für Pilates: Technik-Tutorials und Follow-Along-Workouts. Melde dich an und trainiere flexibel von zu Hause aus.' />
+        <meta property='og:url' content='https://elevate-pilates.de/online-kurse' />
 
         {/* Twitter Card Tags */}
-        <meta name="twitter:title" content="Online Kurse | Elevate Pilates" />
-        <meta name="twitter:description" content="Entdecke unsere Online-Kurse für Pilates: Technik-Tutorials und Follow-Along-Workouts. Melde dich an und trainiere flexibel von zu Hause aus." />
+        <meta name='twitter:title' content='Online Kurse | Elevate Pilates' />
+        <meta name='twitter:description' content='Entdecke unsere Online-Kurse für Pilates: Technik-Tutorials und Follow-Along-Workouts. Melde dich an und trainiere flexibel von zu Hause aus.' />
 
         {/* Canonical URL */}
-        <link rel="canonical" href="https://elevate-pilates.de/online-kurse" />
+        <link rel='canonical' href='https://elevate-pilates.de/online-kurse' />
 
         {/* Language Tag */}
-        <html lang="de" />
+        <html lang='de' />
       </Helmet>
 
     <PageDiv>
       <ContactModal
         isOpen={isModalOpen}
         onClose={handleCloseModal}
-        registerCourse="Video Kurse"
+        registerCourse='Video Kurse'
       />
       <ContainerDiv>
         {isLoggedIn ? (
@@ -358,10 +358,10 @@ const OnlineCourse = () => {
                       <div>
                         <VideoTitle>{workout.title}</VideoTitle>
                         <PlaylistText>
-                          Listen to my{" "}
+                          Listen to my{' '}
                           <SpotifyLink
-                            target="_blank"
-                            href="https://open.spotify.com/playlist/46w0f41ciIZIlk2Hgf1JMH?si=DGK10GMMQwumO_2KRJ48WA&pi=Hl_NpUwzT9aXc"
+                            target='_blank'
+                            href='https://open.spotify.com/playlist/46w0f41ciIZIlk2Hgf1JMH?si=DGK10GMMQwumO_2KRJ48WA&pi=Hl_NpUwzT9aXc'
                           >
                             Spotify Playlist
                           </SpotifyLink>
@@ -386,29 +386,29 @@ const OnlineCourse = () => {
                 <CardInner>
                   <FormDiv ref={form} onSubmit={LogIn}>
                     <input
-                      type="hidden"
-                      name="message"
-                      value={`I would like to sign up for the video classes`}
+                      type='hidden'
+                      name='message'
+                      value={'I would like to sign up for the video classes'}
                     />
                     <Input
-                      type="text"
-                      name="user_name"
-                      placeholder="Dein Name"
+                      type='text'
+                      name='user_name'
+                      placeholder='Dein Name'
                       required
                     />
                     <Input
-                      type="password"
-                      name="password"
-                      placeholder="Passwort"
+                      type='password'
+                      name='password'
+                      placeholder='Passwort'
                       required
                     />
                     <BtnDiv>
-                      <SubmitBtn type="submit" disabled={isSubmitting}>
+                      <SubmitBtn type='submit' disabled={isSubmitting}>
                         <IconSend />
-                        {isSubmitting ? "Logging in..." : "Log In"}
+                        {isSubmitting ? 'Logging in...' : 'Log In'}
                       </SubmitBtn>
 
-                      <RegisterBtn type="button" onClick={handleOpenModal}>
+                      <RegisterBtn type='button' onClick={handleOpenModal}>
                         Registrieren
                       </RegisterBtn>
                     </BtnDiv>
@@ -422,7 +422,7 @@ const OnlineCourse = () => {
                 </CardInner>
               </FAQOuterCard>
             </GridDiv>
-            <BackLink to="/">Zurück zur Homepage</BackLink>
+            <BackLink to='/'>Zurück zur Homepage</BackLink>
           </>
         )}
       </ContainerDiv>

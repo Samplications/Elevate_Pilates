@@ -5,8 +5,8 @@ import {
   BrowserRouter as Router,
   Route,
   Routes,
-  useLocation
-} from "react-router-dom";
+  useLocation,
+} from 'react-router-dom';
 import App from './App.jsx';
 import Header from './components/Header.jsx';
 import Footer from './components/Footer.jsx';
@@ -50,5 +50,5 @@ createRoot(document.getElementById('root')).render(
     <Router>
       <RootComponent />
     </Router>
-  </StrictMode>
+  </StrictMode>,
 );

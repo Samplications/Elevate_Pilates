@@ -1,6 +1,5 @@
-import { useState, useEffect, useRef } from 'react';
+import { useRef } from 'react';
 import styled from 'styled-components';
-import emailjs from '@emailjs/browser';
 import { Link } from 'react-router-dom';
 import IconSend from '../assets/icons/send-svgrepo-com.svg?react';
 
@@ -114,8 +113,6 @@ const SubmitBtn = styled.button`
 function InfoModal({ isOpen, onClose }) {
 
   if (!isOpen) return null;
-
-  const form = useRef();
 
   // Handle click outside modal content
   const handleOverlayClick = (e) => {

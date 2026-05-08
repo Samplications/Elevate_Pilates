@@ -265,7 +265,7 @@ const ContactPage = () => {
         'service_utj4chp',
         'template_r1flswz',
         form.current,
-        'kOvmC5bVWZLywIJxx'
+        'kOvmC5bVWZLywIJxx',
       )
       .then(
         () => {
@@ -274,7 +274,7 @@ const ContactPage = () => {
         },
         () => {
           setError(true);
-        }
+        },
       );
   };
 

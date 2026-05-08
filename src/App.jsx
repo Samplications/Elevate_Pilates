@@ -1,8 +1,7 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import styled, { keyframes } from 'styled-components';
 import Hero from './components/Hero';
 import { Link as RouterLink } from 'react-router-dom';
-import axios from "axios";
 import ContactModal from './components/ContactModal';
 
 import IconCalendar from './assets/icons/calendar-svgrepo-com.svg?react';
@@ -379,7 +378,7 @@ function App() {
   const [courseDates, setCourseDates] = useState([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isModalContactOpenDefault, setIsModalContactOpen] = useState(false);
-  const [selectedCourse, setSelectedCourse] = useState("");
+  const [selectedCourse, setSelectedCourse] = useState('');
 
   const handleOpenModal = () => {
     setIsModalOpen(true);
@@ -486,7 +485,7 @@ function App() {
                     <CourseBtn
                       onClick={(e) => {
                         e.preventDefault();
-                        window.open("/Courses.pdf", "_blank")
+                        window.open('/Courses.pdf', '_blank');
                       }}
                     >
                       Vergrößern
