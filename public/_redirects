@@ -1,4 +1,4 @@
-http://www.*    https://:splat  301!
-http://*        https://:splat  301!
-https://www.*   https://:splat  301!
+http://elevate-pilates.de/*    https://www.elevate-pilates.de/:splat  301!
+http://www.elevate-pilates.de/*  https://www.elevate-pilates.de/:splat  301!
+https://elevate-pilates.de/*   https://www.elevate-pilates.de/:splat  301!
 /* /index.html 200

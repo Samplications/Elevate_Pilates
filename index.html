@@ -9,21 +9,40 @@
     <title>Elevate Yourself | Elevate Pilates Darmstadt</title>
 
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HealthClub",
+  "name": "Elevate Pilates",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Alicenstraße 4",
+    "addressLocality": "Darmstadt",
+    "postalCode": "64293",
+    "addressCountry": "DE"
+  },
+  "url": "https://www.elevate-pilates.de/", 
+  "openingHoursSpecification": [         
     {
-    "@context": "https://schema.org",
-    "@type": "HealthClub",
-    "name": "Elevate Pilates",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Alicenstraße 4",
-      "addressLocality": "Darmstadt",
-      "postalCode": "64293",
-      "addressCountry": "DE"
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday"],
+      "opens": "18:30",
+      "closes": "19:30"
     },
-    "url": "https://elevate-pilates.de",
-    "openingHours": "Mon 18:30-19:30, Thu 19:00-20:00, Sat 09:30-10:30"
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Thursday"],
+      "opens": "19:00",
+      "closes": "20:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Saturday"],
+      "opens": "09:30",
+      "closes": "10:30"
     }
-    </script>
+  ]
+}
+</script>
 
     <meta 
   name="description" 
@@ -48,7 +67,7 @@
     <meta name="twitter:image" content="https://elevate-pilates.de/favicon.ico">
 
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://elevate-pilates.de/" />
+    <link rel="canonical" href="https://wwww.elevate-pilates.de/" />
 
     <!-- Preload critical resources -->
     <link rel="preload" href="./src/main.jsx" as="script">
