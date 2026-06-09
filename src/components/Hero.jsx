@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import styled, { keyframes } from 'styled-components';
-import pilates_class from '../assets/pilates_class.jpg';
+import pilates_class from '../assets/pilates_class.webp';
 
 const FullWidthImageContainer = styled.div`
   position: relative;

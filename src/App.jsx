@@ -12,7 +12,7 @@ import IconWeights from './assets/icons/dumbbell-large-minimalistic-svgrepo-com.
 import IconLocation from './assets/icons/location-pin-alt-1-svgrepo-com.svg?react';
 import IconWorld from './assets/icons/world-2-svgrepo-com.svg?react';
 
-import ImgJuliaLizenz from './assets/julia_lizenz.jpg';
+import ImgJuliaLizenz from './assets/julia_lizenz.webp';
 import FAQ from './components/Faq';
 import InfoModal from './components/InfoModal';
 import { Helmet } from 'react-helmet-async';
@@ -482,7 +482,7 @@ function App() {
                   <ListDiv>
                     <CourseDiv>
                       <CourseFrame
-                        src="/Courses.png"
+                        src="/Courses.webp"
                         alt="Course Schedule"
                       />
                     </CourseDiv>
