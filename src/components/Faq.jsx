@@ -165,7 +165,7 @@ const FAQ = () => {
       question: 'Was ist der Unterschied zwischen Pilates auf der Matte und dem Reformer?',
       answer:
         (<>
-        Die von Joseph Pilates entwickelte Methode findet ihren Ursprung auf der Matte. Du nutzt dein eigenes Körpergewicht, um die Bewegung auszuführen und zu kontrollieren. Der Reformer wurde als Instrument zur Unterstützung, vor allem im Rehabilitationsbereich, entwickelt und bietet Widerstand und Führung durch Anwendung von Federn und Seilzügen. Beide Methoden helfen dem Körper Mobilität, Kraft und Balance aufzubauen. In der aktuellen Zeit wir Reformer-Pilates daher oft irrtümlicherweise als "Fortgeschritten" und Matten-Pilates als "Anfänger" bezeichnet. Dies ist jedoch nicht der Fall.
+        Die von Joseph Pilates entwickelte Methode findet ihren Ursprung auf der Matte. Du nutzt dein eigenes Körpergewicht, um die Bewegung auszuführen und zu kontrollieren. Der Reformer wurde als Instrument zur Unterstützung, vor allem im Rehabilitationsbereich, entwickelt und bietet Widerstand und Führung durch Anwendung von Federn und Seilzügen. Beide Methoden helfen dem Körper Mobilität, Kraft und Balance aufzubauen. In der aktuellen Zeit wird Reformer-Pilates daher oft irrtümlicherweise als "Fortgeschritten" und Matten-Pilates als "Anfänger" bezeichnet. Dies ist jedoch nicht der Fall.
         <br/>
         Elevate ist auf Basis der klassischen Methode des Matten-Pilates konzipiert. Diese verlangt mehr Eigenkontrolle und Konzentration ab, da das Feedback der Bewegung direkt von deinem eigenen Körper ohne äußere Einwirkung erfolgt und gesteuert werden kann.
         </>),
