@@ -318,7 +318,7 @@ Julia<br>
 
       onSuccess();
     } catch (err) {
-      setError('Failed to send registration. Please try again.');
+      setError('Anmeldung Fehlgeschlagen. Bitte versuche es erneut.');
     } finally {
       setLoading(false);
     }
@@ -326,10 +326,10 @@ Julia<br>
 
   return (
     <form onSubmit={handleSubmit} style={{ maxWidth: '400px', margin: '0 auto' }}>
-      <h3>Book "{workshopName}"</h3>
-      <p>Price: €{amount}</p>
+      <h3>Anmeldung für <br/>"{workshopName}"</h3>
+      <p>Preis: €{amount}</p>
 
-      <FormLabel>First Name</FormLabel>
+      <FormLabel>Vorname</FormLabel>
       <FormInput
         type="text"
         name="firstName"
@@ -339,7 +339,7 @@ Julia<br>
         required
       />
 
-      <FormLabel>Last Name</FormLabel>
+      <FormLabel>Nachname</FormLabel>
       <FormInput
         type="text"
         name="lastName"
@@ -359,7 +359,7 @@ Julia<br>
         required
       />
 
-      <FormLabel>Phone (optional)</FormLabel>
+      <FormLabel>Telefonnr. (optional)</FormLabel>
       <FormInput
         type="tel"
         name="tel"
@@ -373,7 +373,7 @@ Julia<br>
           Cancel
         </RegisterButton>
         <RegisterButton type="submit" disabled={loading} style={{ padding: '8px 16px' }}>
-          {loading ? 'Processing...' : 'Register'}
+          {loading ? 'Processing...' : 'Anmelden'}
         </RegisterButton>
       </div>
       {error && <p style={{ color: 'red' }}>{error}</p>}
@@ -429,12 +429,12 @@ const WorkshopPage = () => {
   // const [intentLoading, setIntentLoading] = useState(false); // For stripe
 
   const workshops = [
-    { id: 1, title: 'Workshop 1: The Foundation', subtitle: 'Ideal für Einsteiger', date: '08.08.2026', price: 65, description: 'In dem ersten Part der <i>Elevate Series</i> lernst du die essenziellen Grundlagen des Pilates kennen und entwickelst ein solides Fundament für deine weitere Praxis – in deiner nächsten Class oder zu Hause. Gemeinsam legen wir die Basis – von der Atmung über die Aktivierung deines Powerhouses bis hin zu den Foundations der Contrology.', image: workshop1Img },
-    { id: 2, title: 'Workshop 2: Stability & Balance', subtitle: 'Für alle Levels', date: '29.08.2026', price: 65, description: 'Gemeinsam erarbeiten wir mit ausgewählten Übungen deine Stabilität und Balance auf der Matte. Finde Kraft aus deiner tiefen Mitte und lerne, wie du sie gemeinsam mit deiner Atmung für eine kontrollierte Ausführung der Übungen nutzen kannst.', image: workshop2Img },
-    { id: 3, title: 'Workshop 3: Core & Pelvic Floor', subtitle: 'Für alle Levels', date: '19.09.2026', price: 65, description: 'Unser Powerhouse und Beckenboden arbeiten enger zusammen, als dir vielleicht bewusst ist. Im Einklang mit unserer Atmung können wir unseren Beckenboden stabilisieren, mobilisieren und stärken – für kontrolliertere Bewegung und einen nachhaltig gesunden Körper.', image: workshop3Img },
-    { id: 4, title: 'Workshop 4: Mobility & Flexibility', subtitle: 'Für alle Levels', date: '17.10.2026', price: 65, description: 'In diesem Part entwickeln wir ein noch feineres Körpergefühl und arbeiten gezielt an der Mobilität deiner Gelenke sowie deiner Flexibilität. Erlerne, wie du deine Hüfte, Beine oder Wirbelsäule gezielt mobilisieren und deine Flexibilität erweitern kannst – unabhängig davon, ob du noch ganz am Anfang stehst oder deine bisherigen Fähigkeiten ausbauen möchtest.', image: workshop4Img },
-    { id: 5, title: 'Workshop 5: Alignment & Refinement', subtitle: 'Für alle Levels', date: '14.11.2026', price: 65, description: 'Ganz nach dem Prinzip: Qualität vor Quantität. Anhand ausgewählter Übungen entwickelst du eine noch präzisere Mind-Muscle-Connection sowie ein feineres Körpergefühl und mehr Kontrolle über deine Bewegungen.', image: workshop5Img },
-    { id: 6, title: 'Workshop 6: Advancing on the Mat', subtitle: 'Ideal für Erfahrene & Fortgeschrittene', date: '05.12.2026', price: 65, description: 'Im letzten Part der <i>Elevate Series</i> ist deine Gelegenheit, deine Skills auf der Matte auf das nächste Level zu bringen. Eventuell hast du dich bisher nicht getraut oder wusstest nicht genau, wie du sicher und kontrolliert den Schwierigkeitsgrad einer Übung erhöhst. Mit meiner Unterstützung gewinnst du das nötige Vertrauen und die Technik, um anspruchsvollere Übungen sicher und kontrolliert auszuführen.', image: workshop6Img },
+    { id: 1, title: 'Workshop 1: The Foundation', subtitle: 'Ideal für Einsteiger', date: '08.08.2026 11:30', price: 65, description: 'In dem ersten Part der <i>Elevate Series</i> lernst du die essenziellen Grundlagen des Pilates kennen und entwickelst ein solides Fundament für deine weitere Praxis – in deiner nächsten Class oder zu Hause. Gemeinsam legen wir die Basis – von der Atmung über die Aktivierung deines Powerhouses bis hin zu den Foundations der Contrology.', image: workshop1Img },
+    { id: 2, title: 'Workshop 2: Stability & Balance', subtitle: 'Für alle Levels', date: '29.08.2026 11:30', price: 65, description: 'Gemeinsam erarbeiten wir mit ausgewählten Übungen deine Stabilität und Balance auf der Matte. Finde Kraft aus deiner tiefen Mitte und lerne, wie du sie gemeinsam mit deiner Atmung für eine kontrollierte Ausführung der Übungen nutzen kannst.', image: workshop2Img },
+    { id: 3, title: 'Workshop 3: Core & Pelvic Floor', subtitle: 'Für alle Levels', date: '19.09.2026 11:30', price: 65, description: 'Unser Powerhouse und Beckenboden arbeiten enger zusammen, als dir vielleicht bewusst ist. Im Einklang mit unserer Atmung können wir unseren Beckenboden stabilisieren, mobilisieren und stärken – für kontrolliertere Bewegung und einen nachhaltig gesunden Körper.', image: workshop3Img },
+    { id: 4, title: 'Workshop 4: Mobility & Flexibility', subtitle: 'Für alle Levels', date: '17.10.2026 11:30', price: 65, description: 'In diesem Part entwickeln wir ein noch feineres Körpergefühl und arbeiten gezielt an der Mobilität deiner Gelenke sowie deiner Flexibilität. Erlerne, wie du deine Hüfte, Beine oder Wirbelsäule gezielt mobilisieren und deine Flexibilität erweitern kannst – unabhängig davon, ob du noch ganz am Anfang stehst oder deine bisherigen Fähigkeiten ausbauen möchtest.', image: workshop4Img },
+    { id: 5, title: 'Workshop 5: Alignment & Refinement', subtitle: 'Für alle Levels', date: '14.11.2026 11:30', price: 65, description: 'Ganz nach dem Prinzip: Qualität vor Quantität. Anhand ausgewählter Übungen entwickelst du eine noch präzisere Mind-Muscle-Connection sowie ein feineres Körpergefühl und mehr Kontrolle über deine Bewegungen.', image: workshop5Img },
+    { id: 6, title: 'Workshop 6: Advancing on the Mat', subtitle: 'Ideal für Erfahrene & Fortgeschrittene', date: '05.12.2026 11:30', price: 65, description: 'Im letzten Part der <i>Elevate Series</i> ist deine Gelegenheit, deine Skills auf der Matte auf das nächste Level zu bringen. Eventuell hast du dich bisher nicht getraut oder wusstest nicht genau, wie du sicher und kontrolliert den Schwierigkeitsgrad einer Übung erhöhst. Mit meiner Unterstützung gewinnst du das nötige Vertrauen und die Technik, um anspruchsvollere Übungen sicher und kontrolliert auszuführen.', image: workshop6Img },
   ];
 
   const handleRegister = async (workshop) => {
@@ -473,7 +473,7 @@ const WorkshopPage = () => {
   };
 
   const handleBookingSuccess = () => {
-    alert('Booking successful! Thank you for registering.');
+    alert('Anfrage erfolgreich abgesendet!');
     handleCloseModal();
   };
 
