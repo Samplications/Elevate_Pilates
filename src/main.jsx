@@ -15,6 +15,7 @@ import ImpressumPage from './pages/ImpressumPage.jsx';
 import DisclaimerPage from './pages/DisclaimerPage.jsx';
 import PrivacyPage from './pages/PrivacyPage.jsx';
 import OnlineCourse from './pages/OnlineCourse.jsx';
+import WorkshopPage from './pages/WorkshopPage.jsx';
 
 // Custom component to handle scrolling to top on route change
 const ScrollToTop = () => {
@@ -38,6 +39,7 @@ const RootComponent = () => (
       <Route exact path="/disclaimer" element={<DisclaimerPage />} />
       <Route exact path="/privacy" element={<PrivacyPage />} />
       <Route exact path="/online-Kurse" element={<OnlineCourse />} />
+      <Route exact path="/workshops" element={<WorkshopPage />} />
 
       <Route path="*" element={<App />} />
     </Routes>

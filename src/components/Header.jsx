@@ -56,7 +56,7 @@ const SubHeadDiv = styled.div`
   color: var(--c-transparent-text);
   width: 100%;
   margin: 0;
-  font-style: italic;
+  // font-style: italic;
   display: flex;
   flex-direction: column;
 
@@ -69,7 +69,7 @@ const SubHeadDiv = styled.div`
 
 const SubHeadNavDiv = styled.div`
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto auto auto auto;
     gap: clamp(0.9rem, 2vw, 5rem);
     justify-content: center;
     align-content: center;
@@ -102,6 +102,7 @@ const Header = () => {
           <SubHeadNavDiv>
             <NavLink to="/">Home</NavLink>
             <NavLink to="/contact">Kontakt</NavLink>
+            <NavLink to="/workshops">Workshops</NavLink>
             <NavLink to="/online-Kurse">Video Kurse</NavLink>
           </SubHeadNavDiv>
         </SubHeadDiv>
