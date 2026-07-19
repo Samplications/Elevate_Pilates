@@ -333,7 +333,6 @@ Julia<br>
       <FormInput
         type="text"
         name="firstName"
-        placeholder="Lina"
         value={formData.firstName}
         onChange={handleInputChange}
         required
@@ -343,7 +342,6 @@ Julia<br>
       <FormInput
         type="text"
         name="lastName"
-        placeholder="Miller"
         value={formData.lastName}
         onChange={handleInputChange}
         required
@@ -353,7 +351,6 @@ Julia<br>
       <FormInput
         type="email"
         name="email"
-        placeholder="lina.miller@mail.com"
         value={formData.email}
         onChange={handleInputChange}
         required
@@ -363,7 +360,6 @@ Julia<br>
       <FormInput
         type="tel"
         name="tel"
-        placeholder="+49 123456789"
         value={formData.tel}
         onChange={handleInputChange}
       />
