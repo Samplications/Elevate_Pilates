@@ -439,27 +439,27 @@ const WorkshopPage = () => {
     setIntentError(null);
     setIntentLoading(true);
 
-    try {
-      const response = await fetch('http://localhost:4242/api/create-payment-intent', { //TODO
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          amount: workshop.price * 100, // cents
-          workshopName: workshop.title,
-        }),
-      });
+    // try {
+    //   const response = await fetch('http://localhost:4242/api/create-payment-intent', { //TODO
+    //     method: 'POST',
+    //     headers: { 'Content-Type': 'application/json' },
+    //     body: JSON.stringify({
+    //       amount: workshop.price * 100, // cents
+    //       workshopName: workshop.title,
+    //     }),
+    //   });
 
-      if (!response.ok) {
-        throw new Error('Could not start checkout. Please try again.');
-      }
+    //   if (!response.ok) {
+    //     throw new Error('Could not start checkout. Please try again.');
+    //   }
 
-      const { clientSecret } = await response.json();
-      setClientSecret(clientSecret);
-    } catch (err) {
-      setIntentError(err.message);
-    } finally {
-      setIntentLoading(false);
-    }
+    //   const { clientSecret } = await response.json();
+    //   setClientSecret(clientSecret);
+    // } catch (err) {
+    //   setIntentError(err.message);
+    // } finally {
+    //   setIntentLoading(false);
+    // }
   };
 
   const handleCloseModal = () => {
@@ -497,21 +497,29 @@ const WorkshopPage = () => {
             </SectionTitle>
 
             <CardDiv>
-              {workshops.map((workshop) => (
-                <FAQOuterCard key={workshop.id}>
-                  <CardInner>
-                    <div>
-                      <h3>{workshop.title}</h3>
-                      <DateTxt>{workshop.subtitle}</DateTxt>
-                      <p dangerouslySetInnerHTML={{ __html: workshop.description}}/>
-                      <RegisterButton onClick={() => handleRegister(workshop)}>
-                        Anmelden für €{workshop.price}
-                      </RegisterButton>
-                    </div>
-                    <ImgDiv src={workshop.image} alt={workshop.title} />
-                  </CardInner>
-                </FAQOuterCard>
-              ))}
+              {workshops.map((workshop) => {
+                const workshopDate = new Date(workshop.date.replace(/(\d+)\.(\d+)\.(\d+)/, '$3-$2-$1'));
+                const isPastDate = workshopDate < new Date();
+
+                return (
+                  <FAQOuterCard key={workshop.id}>
+                    <CardInner>
+                      <div>
+                        <h3>{workshop.title}</h3>
+                        <DateTxt>{workshop.subtitle}</DateTxt>
+                        <p dangerouslySetInnerHTML={{ __html: workshop.description }} />
+                        <RegisterButton
+                          onClick={() => !isPastDate && handleRegister(workshop)}
+                          disabled={isPastDate}
+                        >
+                          {isPastDate ? "Vergangen" : `Anmelden für €${workshop.price}`}
+                        </RegisterButton>
+                      </div>
+                      <ImgDiv src={workshop.image} alt={workshop.title} />
+                    </CardInner>
+                  </FAQOuterCard>
+                );
+              })}
             </CardDiv>
 
             <SectionTitle>
