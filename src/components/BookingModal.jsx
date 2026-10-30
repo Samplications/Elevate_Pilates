@@ -1,5 +1,5 @@
 import { useState } from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { useAuth } from "../hooks/useAuth";
 import { useQueryClient, useMutation } from "@tanstack/react-query";
 import { supabase } from "../utils/supabase/client";
@@ -73,42 +73,50 @@ const RadioLabel = styled.label`
 
 const ButtonGroup = styled.div`
   display: flex;
-  gap: 1em;
+  flex-wrap: wrap;           /* stack if they really don't fit */
+  gap: clamp(0.5em, 2vw, 1em);
   justify-content: center;
   margin-top: 1em;
 `;
 
-const ConfirmButton = styled.button`
-  background-color: var(--c-secondary);
-  color: var(--c-white);
-  border: 2px solid var(--c-secondary);
+const baseButton = css`
+  flex: 1 1 auto;            /* buttons share the row and shrink as needed */
+  min-width: 0;
+  padding: clamp(0.5em, 1.5vw, 0.75em) clamp(1em, 4vw, 2em);
+  font-size: clamp(0.85rem, 2vw, 1.2rem);
+  border: 2px solid;
   border-radius: 25px;
-  padding: 0.75em 2em;
-  font-size: clamp(1rem, 2vw, 1.2rem);
   cursor: pointer;
   transition: all 0.3s;
   font-family: inherit;
   font-weight: 500;
+  white-space: nowrap;
 
-  &:hover {
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+`;
+
+const ConfirmButton = styled.button`
+  ${baseButton}
+  background-color: var(--c-secondary);
+  color: var(--c-white);
+  border-color: var(--c-secondary);
+
+  &:hover:not(:disabled) {
     background-color: var(--c-white);
     color: var(--c-black);
   }
 `;
 
 const CancelButton = styled.button`
+  ${baseButton}
   background-color: transparent;
   color: var(--c-black);
-  border: 2px solid var(--c-black);
-  border-radius: 25px;
-  padding: 0.75em 2em;
-  font-size: clamp(1rem, 2vw, 1.2rem);
-  cursor: pointer;
-  transition: all 0.3s;
-  font-family: inherit;
-  font-weight: 500;
+  border-color: var(--c-black);
 
-  &:hover {
+  &:hover:not(:disabled) {
     background-color: var(--c-black);
     color: var(--c-white);
   }
