@@ -116,6 +116,30 @@ const SuccessMessage = styled.p`
   font-size: clamp(0.9rem, 2vw, 1rem);
 `;
 
+const PrivacyLabel = styled.label`
+  display: flex;
+  align-items: flex-start;   /* checkbox stays at the top when text wraps to multiple lines */
+  gap: 0.5em;
+  margin-top: 0.5em;
+  font-size: clamp(0.75rem, 2.5vw, 0.875rem); /* smaller, scales a bit with screen */
+  line-height: 1.4;
+  cursor: pointer;
+`;
+
+const PrivacyCheckbox = styled.input`
+  flex-shrink: 0;            /* never shrink the checkbox */
+  width: 18px;
+  height: 18px;
+  margin: 0.1em 0 0 0;       /* nudge to align with the first line of text */
+  cursor: pointer;
+`;
+
+const PrivacyText = styled.span`
+  flex: 1;
+  min-width: 0;              /* allows the text to wrap inside the flex container */
+  overflow-wrap: anywhere;   /* prevents overflow on very narrow screens */
+`;
+
 type Mode = 'login' | 'register' | 'reset';
 
 type AuthFormProps = {
@@ -279,15 +303,14 @@ const AuthForm = ({ onLoginSuccess }: AuthFormProps) => {
       )}
 
       {mode === 'register' && (
-          <label style={{ display: 'flex', alignItems: 'center', gap: '0.5em', marginTop: '0.5em' }}>
-            <Input
+          <PrivacyLabel style={{ display: 'flex', alignItems: 'center', gap: '0.5em', marginTop: '0.5em' }}>
+            <PrivacyCheckbox 
               type="checkbox"
               name="privacy_agreement"
-              required
-              style={{ width: '18px', height: '18px' }}
-            />
-            Ich habe die <RouterLink to="/disclaimer">Datenschutzerklärung und AGBs</RouterLink> gelesen und stimme zu.
-          </label>
+              required/>
+            <PrivacyText>Ich habe die <RouterLink to="/disclaimer">Datenschutzerklärung und AGBs</RouterLink> gelesen und stimme zu.</PrivacyText>
+            
+          </PrivacyLabel>
       )}
 
       <BtnDiv>

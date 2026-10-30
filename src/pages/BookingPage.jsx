@@ -258,6 +258,9 @@ const RegisterBtnDiv = styled.div`
 const RegisterTitle = styled.h3`
   margin-top: 0;
   margin-bottom: 0;
+
+  white-space: nowrap;
+  font-size: clamp(1rem, 4vw, 1.5rem);
 `;
 
 const Separator = styled.div`
@@ -297,9 +300,13 @@ const CancelButton = styled.button`
 `;
 
 const ButtonWrapper = styled.div`
-  position: relative;
+  
   width: 100%;
   height: 100%;
+
+  display: flex;
+  justify-content: center; // Centers horizontally
+  align-items: center; // Centers vertically
 `;
 
 // Usage:
