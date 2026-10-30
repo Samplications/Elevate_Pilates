@@ -27,7 +27,7 @@ const ContainerDiv = styled.div`
   display: grid;
   grid-template-columns: 1fr
   justify-items: center;
-  gap:1em;
+  gap:0.5em;
   width: 100%;
   max-width: 1600px;
   padding: clamp(1em, 3vw, 4em); clamp(1em, 3vw, 2em);
@@ -45,6 +45,7 @@ const CardDiv = styled.div`
 `;
 
 const SectionTitle = styled.h1`
+  margin-top: 0.5em;
   color: #1d1d1da9;
   margin-bottom: 0;
   text-align: center;
@@ -140,6 +141,10 @@ const FormLabel = styled.label`
   margin-bottom: 0.5em;
   font-weight: bold;
   color: #333;
+`;
+
+const AboutTxt = styled.p`
+  margin:0 0 1em 0;
 `;
 
 // // --- Stripe Checkout Form ---
@@ -491,7 +496,7 @@ const WorkshopPage = () => {
 
       <PageDiv>
         <ContainerDiv>
-          <div>
+          
             <SectionTitle>
               <ElevateSpan>Elevate</ElevateSpan> Series
             </SectionTitle>
@@ -525,14 +530,14 @@ const WorkshopPage = () => {
             <SectionTitle>
               About the <br/><ElevateSpan>Elevate</ElevateSpan> Series
             </SectionTitle>
-            <p>
+            <AboutTxt>
               Die Workshopreihe findet bilingual auf Deutsch und Englisch statt. Jeder Workshop umfasst 2,5 Stunden und findet in einer exklusiven Women-Only-Kleingruppe statt. In einer ruhigen, persönlichen Atmosphäre widmen wir uns intensiv einem Schwerpunktthema, damit du die Pilates-Methode nicht nur ausführst, sondern wirklich verstehst und nachhaltig in deine eigene Praxis integrieren kannst.
 <br/><br/>
 Zu Beginn jedes Workshops erhältst du ein fundiertes Verständnis der theoretischen Grundlagen und erfährst, welche Ziele die einzelnen Übungen verfolgen und wie du sie sicher sowie kontrolliert ausführst. Anschließend setzen wir das Gelernte in einem harmonischen Flow gemeinsam um. Zum Abschluss hast du ausreichend Zeit, deine offenen Fragen zu stellen – ich beantworte sie dir gerne.
 <br/><br/>
 Eine kurze Pause ist ebenfalls vorgesehen - kleine Snacks und Getränke stehen für dich bereit 🙂
-            </p>
-          </div>
+            </AboutTxt>
+          
         </ContainerDiv>
 
 

@@ -45,7 +45,7 @@ const ContainerDiv = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: column;
-  gap: 1em;
+  gap: 0.5em;
   width: 100%;
   max-width: 1600px;
   padding: clamp(1em, 3vw, 4em); clamp(1em, 3vw, 2em);
@@ -54,6 +54,7 @@ const ContainerDiv = styled.div`
 
 const SectionTitle = styled.h1`
   color: #1d1d1da9;
+  margin-top: 0.5em;
   margin-bottom: 0;
   text-align: center;
   font-size: clamp(2rem, 6vw, 4rem);

@@ -506,11 +506,11 @@ function App() {
                 <RatesDiv>
                   
                   <RateListItemDiv>
-                    <p>➤ Drop-in Session</p>
+                    <p>➤ Drop-in</p>
                     <p>€ 20</p>
                   </RateListItemDiv>
                   <RateListItemDiv>
-                    <p>➤ 10er Pass</p>
+                    <p>➤ 10er-Karte</p>
                     <p>€ 150</p>
                   </RateListItemDiv>
                   <RateListItemDiv>
@@ -528,7 +528,7 @@ function App() {
                 </RatesDiv>
               </div>
               <ParentDiv>
-                <SignupBtn to="/contact">Jetzt Anmelden!</SignupBtn>
+                <SignupBtn to="/kurse-buchen">Jetzt Anmelden!</SignupBtn>
               </ParentDiv>
             </CardInnerTop>
           </TopRowDiv>
@@ -543,10 +543,10 @@ function App() {
                       <IconLocation />
                       <p>Alicenstraße 4, 64293 Darmstadt</p>
                     </ListItemDiv>
-                    <ListItemDiv>
+                    {/* <ListItemDiv>
                       <IconCalendar />
                       <p>Montag, Donnerstag und Samstag</p>
-                    </ListItemDiv>
+                    </ListItemDiv> */}
                     <ListItemDiv>
                       <IconFemale />
                       <p>Women Only</p>
@@ -557,12 +557,12 @@ function App() {
                     </ListItemDiv>
                     <ListItemDiv>
                       <IconWorld />
-                      <p>Deutsch/Englisch</p>
+                      <p>Deutsch/English</p>
                     </ListItemDiv>
                     <ListItemDiv>
                       <IconWrite />
                       <FatText>
-                        Kostenlose Probestunde nach Vereinbarung
+                        Kostenlose Probestunde
                       </FatText>
                     </ListItemDiv>
                   </ListDiv>

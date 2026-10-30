@@ -3,6 +3,8 @@ import styled, { css } from 'styled-components';
 import IconQuestion from '../assets/icons/question-svgrepo-com.svg?react';
 import IconChevronDown from '../assets/icons/chevron-down-svgrepo-com.svg?react';
 import IconChevronUp from '../assets/icons/chevron-up-svgrepo-com.svg?react';
+import { Link as RouterLink } from 'react-router-dom';
+
 
 const FAQDiv = styled.div`
   width: 100%;
@@ -134,6 +136,10 @@ const InstaLink = styled.a`
   }
 `;
 
+const InternalLink = styled(RouterLink)`
+  font-weight: bold;
+`;
+
 const FAQ = () => {
   const [openIndex, setOpenIndex] = useState(null);
 
@@ -174,7 +180,7 @@ const FAQ = () => {
       question: 'Wie kann ich mich für einen Kurs anmelden?',
       answer:
         (<>
-        Du kannst dich entweder direkt nach deinem ersten kostenlosen Probekurs für eine Mitgliedschaft anmelden oder alternativ eine E-Mail an <InstaLink href='mailto:elevate-pilates@outlook.com'>elevate-pilates@outlook.com</InstaLink> senden.
+        Du kannst deinen Kurs ganz einfach <InternalLink to="/kurse-buchen">HIER</InternalLink> buchen oder alternativ eine E-Mail an <InstaLink href='mailto:elevate-pilates@outlook.com'>elevate-pilates@outlook.com</InstaLink> senden. Eine Monatsmitgliedschaft kannst du direkt nach deinem Probekurs vor Ort abschließen.
         </>),
     },
     {

@@ -45,6 +45,8 @@ a {
 
 a:hover {
   color: var(--c-white);
+  -webkit-text-stroke: 1px var(--c-secondary);
+  paint-order: stroke fill;
 }
 
 body, html {
