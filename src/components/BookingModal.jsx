@@ -125,7 +125,7 @@ const CancelButton = styled.button`
 function BookingModal({ isOpen, onClose, course, member }) {
   const { user } = useAuth();
   const queryClient = useQueryClient();
-  const [selectedOption, setSelectedOption] = useState(null);
+  const [selectedOption, setSelectedOption] = useState("drop-in");
 
   // Move useMutation outside of any conditional block
   const { mutate: confirmBooking, isPending } = useMutation({
