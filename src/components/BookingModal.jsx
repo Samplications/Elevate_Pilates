@@ -131,7 +131,7 @@ function BookingModal({ isOpen, onClose, course, member }) {
   const { mutate: confirmBooking, isPending } = useMutation({
     mutationFn: async ({ selectedOption }) => {
       if (!member?.membership_type && !selectedOption) {
-        throw new Error("Bitte wäle eine Option.");
+        throw new Error("Bitte wähle eine Option");
       }
 
       const isDropIn = member?.membership_type
