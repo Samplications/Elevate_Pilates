@@ -10,6 +10,7 @@ import {
 } from 'react-router-dom';
 import { AuthProvider } from "./hooks/useAuth";
 import App from './App.jsx';
+import RequireAdmin from './components/RequireAdmin.jsx';
 import Header from './components/Header.jsx';
 import Footer from './components/Footer.jsx';
 import ContactPage from './pages/ContactPage.jsx';
@@ -20,6 +21,7 @@ import OnlineCourse from './pages/OnlineCourse.jsx';
 import WorkshopPage from './pages/WorkshopPage.jsx';
 import BookingPage from './pages/BookingPage.jsx';
 import AccountPage from './pages/AccountPage.jsx';
+import ParticipantsPage from './pages/ParticipantsPage.jsx';
 
 // Custom component to handle scrolling to top on route change
 const ScrollToTop = () => {
@@ -49,6 +51,11 @@ const RootComponent = () => (
       <Route exact path="/workshops" element={<WorkshopPage />} />
       <Route exact path="/kurse-buchen" element={<BookingPage />} />
       <Route exact path="/account" element={<AccountPage />} />
+      <Route exact path="/course-participants" element={
+            <RequireAdmin>
+              <ParticipantsPage />
+            </RequireAdmin>
+          } />
       <Route path="*" element={<App />} />
     </Routes>
     </AuthProvider>
