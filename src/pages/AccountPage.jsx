@@ -288,7 +288,11 @@ const AccountPage = () => {
                   <StatLabel>Kurse insgesamt</StatLabel>
                 </StatCard> */}
               </StatsGrid>
-
+                {member?.role === "admin" && (
+                  <div>
+                    <RouterLink to="/course-participants">Participants Overview</RouterLink>
+                  </div>
+                )}
               <SignOutBtn onClick={() => signOut()}>Abmelden</SignOutBtn>
             </CardInner>
           </FAQOuterCard>
